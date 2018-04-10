@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace MaisonDesLiguesAPP
 {
-    public partial class ListerForm : Form
+    public partial class AffichageAdherents : Form
     {
         public AdherentsGerer liste;
-        public ListerForm(AdherentsGerer liste)
+        public AffichageAdherents(AdherentsGerer liste)
         {
             InitializeComponent();
             this.liste = liste;

@@ -16,7 +16,7 @@ namespace MaisonDesLiguesAPP
         public static List<Adhérents> CreerListeClub()
         {
             List<Adhérents> creerListe = new List<Adhérents>();
-            creerListe.Add(new Adhérents("MARTIN", "Michael", DateTime.Now));
+            //creerListe.Add(new Adhérents("MARTIN", "Michael", DateTime.Now));
             return creerListe;
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace MaisonDesLiguesAPP
 {
-    partial class supprimer
+    partial class SupprimerAdherents
     {
         /// <summary>
         /// Required designer variable.

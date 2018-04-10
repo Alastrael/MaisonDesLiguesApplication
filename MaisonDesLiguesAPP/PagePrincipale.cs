@@ -13,38 +13,42 @@ namespace MaisonDesLiguesAPP
     public partial class PagePrincipale : Form
     {
         AdherentsGerer liste;
+        ClubGerer listeClub;
         public PagePrincipale()
         {
             InitializeComponent();
             this.liste = new AdherentsGerer();
+            this.listeClub = new ClubGerer();
         }
 
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ajouterForm ajouter = new ajouterForm(liste);
+            AjouterAdherents ajouter = new AjouterAdherents(liste);
             ajouter.ShowDialog();
         }
 
         private void PagePrincipale_Load(object sender, EventArgs e)
         {
-       
+            /*dataGridLister.AutoGenerateColumns = true;
+            dataGridLister.AutoResizeColumns();
+            dataGridLister.DataSource = liste.getAdhérents();*/
         }
 
         private void ListerToolTipMenuStrip_Click(object sender, EventArgs e)
         {
-            ListerForm Lister = new ListerForm(liste);
+            AffichageAdherents Lister = new AffichageAdherents(liste);
             Lister.ShowDialog();
         }
 
         private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            supprimer suppression = new supprimer(liste);
+            SupprimerAdherents suppression = new SupprimerAdherents(liste);
             suppression.ShowDialog();
         }
 
         private void ajouterClub_Click(object sender, EventArgs e)
         {
-            clubAjouter ajoutClub = new clubAjouter();
+            AjouterClub ajoutClub = new AjouterClub(listeClub);
             ajoutClub.ShowDialog();
         }
     }

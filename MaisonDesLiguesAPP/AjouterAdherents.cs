@@ -10,21 +10,24 @@ using System.Windows.Forms;
 
 namespace MaisonDesLiguesAPP
 {
-    public partial class ajouterForm : Form
+    public partial class AjouterAdherents : Form
     {
         public AdherentsGerer liste;
-        public ajouterForm(AdherentsGerer liste)
+        public DataGridView data;
+        public AjouterAdherents(AdherentsGerer liste/*, DataGridView data*/)
         {
             InitializeComponent();
             this.liste = liste;
+            //this.data = data;
         }
         private void buttonAjouter_Click(object sender, EventArgs e)
         {
             string nom = textBoxNOM.Text;
             string prenom = textBoxPRENOM.Text;
-            liste.ajouterAdherent(new Adhérents(nom, prenom, DateTime.Now));
+            //liste.ajouterAdherent(new Adhérents(nom, prenom, DateTime.Now));
             textBoxNOM.Text = "";
             textBoxPRENOM.Text = "";
+            
         }
     }
 }

@@ -8,16 +8,17 @@ namespace MaisonDesLiguesAPP
 {
     public class Club
     {
-        private string nom {get; set;}
-        private string lien { get; set; }
-        private string adresse { get; set; }
-        private int nbrDepartement { get; set; }
-        private string ville { get; set; }
-        private string telephone { get; set; }
-        private string email { get; set; }
+        public string nom {get; set;}
+        public string lien { get; set; }
+        public string adresse { get; set; }
+        public int nbrDepartement { get; set; }
+        public string ville { get; set; }
+        public string telephone { get; set; }
+        public string email { get; set; }
+        public int idClub { get; set; }
 
         public Club(string nom, string lien, string adresse, int nbrDepartement,
-            string ville, string telephone, string email)
+            string ville, string telephone, string email, int idClub)
         {
             this.nom = nom;
             this.lien = lien;
@@ -26,6 +27,7 @@ namespace MaisonDesLiguesAPP
             this.ville = ville;
             this.telephone = telephone;
             this.email = email;
+            this.idClub = idClub;
         }
 
     }

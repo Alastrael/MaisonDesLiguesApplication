@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace MaisonDesLiguesAPP
 {
-    public partial class supprimer : Form
+    public partial class SupprimerAdherents : Form
     {
         AdherentsGerer liste = new AdherentsGerer();
         int index;
-        public supprimer(AdherentsGerer liste)
+        public SupprimerAdherents(AdherentsGerer liste)
         {
             InitializeComponent();
             this.liste = liste;

@@ -37,7 +37,9 @@
             this.clubMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterClub = new System.Windows.Forms.ToolStripMenuItem();
             this.supprimerClub = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -48,7 +50,7 @@
             this.clubMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(678, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(421, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,21 +73,21 @@
             // ajouterToolStripMenuItem
             // 
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
             // ListerToolTipMenuStrip
             // 
             this.ListerToolTipMenuStrip.Name = "ListerToolTipMenuStrip";
-            this.ListerToolTipMenuStrip.Size = new System.Drawing.Size(152, 22);
+            this.ListerToolTipMenuStrip.Size = new System.Drawing.Size(129, 22);
             this.ListerToolTipMenuStrip.Text = "Lister";
             this.ListerToolTipMenuStrip.Click += new System.EventHandler(this.ListerToolTipMenuStrip_Click);
             // 
             // supprimerToolStripMenuItem
             // 
             this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.supprimerToolStripMenuItem.Text = "Supprimer";
             this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
             // 
@@ -101,21 +103,30 @@
             // ajouterClub
             // 
             this.ajouterClub.Name = "ajouterClub";
-            this.ajouterClub.Size = new System.Drawing.Size(152, 22);
+            this.ajouterClub.Size = new System.Drawing.Size(129, 22);
             this.ajouterClub.Text = "Ajouter";
             this.ajouterClub.Click += new System.EventHandler(this.ajouterClub_Click);
             // 
             // supprimerClub
             // 
             this.supprimerClub.Name = "supprimerClub";
-            this.supprimerClub.Size = new System.Drawing.Size(152, 22);
+            this.supprimerClub.Size = new System.Drawing.Size(129, 22);
             this.supprimerClub.Text = "Supprimer";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 110);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(397, 150);
+            this.dataGridView1.TabIndex = 1;
             // 
             // PagePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(678, 405);
+            this.ClientSize = new System.Drawing.Size(421, 272);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "PagePrincipale";
@@ -123,6 +134,7 @@
             this.Load += new System.EventHandler(this.PagePrincipale_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,6 +151,7 @@
         private System.Windows.Forms.ToolStripMenuItem clubMenu;
         private System.Windows.Forms.ToolStripMenuItem ajouterClub;
         private System.Windows.Forms.ToolStripMenuItem supprimerClub;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

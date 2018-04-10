@@ -11,7 +11,11 @@ namespace MaisonDesLiguesAPP
         private List<Club> listeClub { get; set; }
         public ClubGerer()
         {
-            
+            listeClub = CreationListe.CreerListeClub();
+        }
+        public void ajouterClub(Club club)
+        {
+            listeClub.Add(club);
         }
     }
 }
