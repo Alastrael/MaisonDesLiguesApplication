@@ -14,54 +14,55 @@ namespace MaisonDesLiguesAPP
     {
         AdherentsGerer liste;
         ClubGerer listeClub;
-        Connection connexion = new Connection();
         public PagePrincipale()
         {
             InitializeComponent();
             this.liste = new AdherentsGerer();
             this.listeClub = new ClubGerer();
         }
-
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AjouterAdherents ajouter = new AjouterAdherents(liste,dataAdherents);
-            ajouter.ShowDialog();    
+            AjouterAdherents ajouter = new AjouterAdherents(liste, dataGridLister);
+            ajouter.ShowDialog();
         }
-
         private void PagePrincipale_Load(object sender, EventArgs e)
         {
-            dataAdherents.AutoGenerateColumns = true;
-            dataAdherents.AutoResizeColumns();
-            dataAdherents.DataSource = connexion.listeAdherents();
-            dataAdherents.Columns[0].Visible = false;
-            dataClubs.AutoGenerateColumns = true;
-            dataClubs.AutoResizeColumns();
-            dataClubs.DataSource = connexion.listeClubs();
-            dataClubs.Columns[0].Visible = false;
+            dataGridClub.AutoGenerateColumns = true;
+            dataGridClub.AutoResizeColumns();
+            dataGridClub.DataSource = listeClub.getClubs();
+            dataGridLister.AutoGenerateColumns = true;
+            dataGridLister.AutoResizeColumns();
+            dataGridLister.DataSource = liste.getAdhérents();
         }
-
         private void ListerToolTipMenuStrip_Click(object sender, EventArgs e)
         {
-            AffichageAdherents Lister = new AffichageAdherents(liste);
+            ListerForm Lister = new ListerForm(liste);
             Lister.ShowDialog();
         }
-
         private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SupprimerAdherents suppression = new SupprimerAdherents(liste);
             suppression.ShowDialog();
         }
-
         private void ajouterClub_Click(object sender, EventArgs e)
         {
-            AjouterClub ajoutClub = new AjouterClub(listeClub,dataClubs);
+            AjouterClub ajoutClub = new AjouterClub(listeClub,dataGridClub);
             ajoutClub.ShowDialog();
         }
-
-        private void affecterToolStripMenuItem_Click(object sender, EventArgs e)
+        //cette fonction a pour but d'actualiser le contenu du datagridview associé
+        public static void GenerationDataLister(DataGridView data, AdherentsGerer liste)
         {
-            AffecterAdherent affectation = new AffecterAdherent();
-            affectation.ShowDialog();
+            data.DataSource = null;
+            data.AutoGenerateColumns = true;
+            data.AutoResizeColumns();
+            data.DataSource = liste.getAdhérents();
+        }
+        public static void RefreshDataClubs(DataGridView data, ClubGerer liste)
+        {
+            data.DataSource = null;
+            data.AutoGenerateColumns = true;
+            data.AutoResizeColumns();
+            data.DataSource = liste.getClubs();
         }
     }
 }

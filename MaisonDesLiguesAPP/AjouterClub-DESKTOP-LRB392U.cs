@@ -20,21 +20,17 @@ namespace MaisonDesLiguesAPP
             this.club = club;
             this.data = data;
         }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void buttonValiderAjoutClub_Click(object sender, EventArgs e)
         {
             //rajouter une fonction de vérification pour chaque entrée des textbox, si
             //c'est vide ça devrait renvoyer une erreur.
-            Connection connexion = new Connection();
-            connexion.ajouterClub(new Club(textBoxNomClub.Text, textBoxLienClub.Text,
-                textBoxAdresseClub.Text, textBoxDepartementClub.Text,
-                textBoxVilleClub.Text, textBoxTelephoneClub.Text, textBoxEmailClub.Text,
-                Convert.ToInt32(textBoxidClub.Text)));
+            club.ajouterClub(new Club(textBoxNomClub.Text, textBoxLienClub.Text,
+                textBoxAdresseClub.Text, Convert.ToInt32(textBoxDepartementClub.Text),
+                textBoxVilleClub.Text, textBoxTelephoneClub.Text, textBoxEmailClub.Text));
             textBoxNomClub.Text = "";
             textBoxLienClub.Text = "";
             textBoxAdresseClub.Text = "";
@@ -42,11 +38,7 @@ namespace MaisonDesLiguesAPP
             textBoxVilleClub.Text = "";
             textBoxTelephoneClub.Text = "";
             textBoxEmailClub.Text = "";
-            textBoxidClub.Text = "";
-            data.DataSource = null;
-            data.Update();
-            data.Refresh();
-            data.DataSource = connexion.listeClubs();
+            PagePrincipale.RefreshDataClubs(data, club);
         }
     }
 }

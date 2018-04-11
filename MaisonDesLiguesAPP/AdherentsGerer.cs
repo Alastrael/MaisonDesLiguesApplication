@@ -13,17 +13,14 @@ namespace MaisonDesLiguesAPP
         {
             liste = CreationListe.CreerListe();
         }
-
         public void ajouterAdherent(Adhérents adhérents)
         {
             liste.Add(adhérents);
         }
-
         public void supprimerAdherent(int i)
         {
             liste.RemoveAt(i);
         }
-
         public List<Adhérents> getAdhérents()
         {
             return this.liste;

@@ -17,5 +17,9 @@ namespace MaisonDesLiguesAPP
         {
             listeClub.Add(club);
         }
+        public List<Club> getClubs()
+        {
+            return this.listeClub;
+        }
     }
 }

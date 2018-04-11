@@ -73,12 +73,6 @@
   <ItemGroup>
     <Compile Include="AdherentsGerer.cs" />
     <Compile Include="Adhérents.cs" />
-    <Compile Include="AffecterAdherent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AffecterAdherent.Designer.cs">
-      <DependentUpon>AffecterAdherent.cs</DependentUpon>
-    </Compile>
     <Compile Include="AjouterAdherents.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,11 +97,11 @@
       <DependentUpon>PagePrincipale.cs</DependentUpon>
     </Compile>
     <Compile Include="IAdhérents.cs" />
-    <Compile Include="AffichageAdherents.cs">
+    <Compile Include="ListerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AffichageAdherents.Designer.cs">
-      <DependentUpon>AffichageAdherents.cs</DependentUpon>
+    <Compile Include="ListerForm.Designer.cs">
+      <DependentUpon>ListerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -117,9 +111,6 @@
     <Compile Include="SupprimerAdherents.Designer.cs">
       <DependentUpon>SupprimerAdherents.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AffecterAdherent.resx">
-      <DependentUpon>AffecterAdherent.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AjouterAdherents.resx">
       <DependentUpon>AjouterAdherents.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,8 +120,8 @@
     <EmbeddedResource Include="PagePrincipale.resx">
       <DependentUpon>PagePrincipale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AffichageAdherents.resx">
-      <DependentUpon>AffichageAdherents.cs</DependentUpon>
+    <EmbeddedResource Include="ListerForm.resx">
+      <DependentUpon>ListerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

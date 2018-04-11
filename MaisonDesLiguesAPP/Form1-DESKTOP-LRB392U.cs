@@ -13,55 +13,46 @@ namespace MaisonDesLiguesAPP
     public partial class PagePrincipale : Form
     {
         AdherentsGerer liste;
-        ClubGerer listeClub;
-        Connection connexion = new Connection();
         public PagePrincipale()
         {
             InitializeComponent();
             this.liste = new AdherentsGerer();
-            this.listeClub = new ClubGerer();
         }
 
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AjouterAdherents ajouter = new AjouterAdherents(liste,dataAdherents);
-            ajouter.ShowDialog();    
+            ajouterForm ajouter = new ajouterForm(liste);
+            ajouter.ShowDialog();
         }
 
         private void PagePrincipale_Load(object sender, EventArgs e)
         {
-            dataAdherents.AutoGenerateColumns = true;
-            dataAdherents.AutoResizeColumns();
-            dataAdherents.DataSource = connexion.listeAdherents();
-            dataAdherents.Columns[0].Visible = false;
-            dataClubs.AutoGenerateColumns = true;
-            dataClubs.AutoResizeColumns();
-            dataClubs.DataSource = connexion.listeClubs();
-            dataClubs.Columns[0].Visible = false;
+       
         }
 
         private void ListerToolTipMenuStrip_Click(object sender, EventArgs e)
         {
-            AffichageAdherents Lister = new AffichageAdherents(liste);
+            ListerForm Lister = new ListerForm(liste);
             Lister.ShowDialog();
         }
 
         private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SupprimerAdherents suppression = new SupprimerAdherents(liste);
+            supprimer suppression = new supprimer(liste);
             suppression.ShowDialog();
         }
 
         private void ajouterClub_Click(object sender, EventArgs e)
         {
-            AjouterClub ajoutClub = new AjouterClub(listeClub,dataClubs);
+            clubAjouter ajoutClub = new clubAjouter();
             ajoutClub.ShowDialog();
         }
 
-        private void affecterToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            AffecterAdherent affectation = new AffecterAdherent();
-            affectation.ShowDialog();
+            Connection connexion = new Connection();
+            if(connexion.OpenConnection())label1.Text = "mabite";
+            
         }
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AjouterClub));
             this.buttonValiderAjoutClub = new System.Windows.Forms.Button();
             this.textBoxNomClub = new System.Windows.Forms.TextBox();
             this.textBoxLienClub = new System.Windows.Forms.TextBox();
@@ -44,13 +43,11 @@
             this.labelVilleClub = new System.Windows.Forms.Label();
             this.labelTelephoneClub = new System.Windows.Forms.Label();
             this.labelEmailClub = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxidClub = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonValiderAjoutClub
             // 
-            this.buttonValiderAjoutClub.Location = new System.Drawing.Point(128, 239);
+            this.buttonValiderAjoutClub.Location = new System.Drawing.Point(129, 194);
             this.buttonValiderAjoutClub.Name = "buttonValiderAjoutClub";
             this.buttonValiderAjoutClub.Size = new System.Drawing.Size(75, 23);
             this.buttonValiderAjoutClub.TabIndex = 0;
@@ -171,29 +168,11 @@
             this.labelEmailClub.TabIndex = 14;
             this.labelEmailClub.Text = "Email du club";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 200);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "identifiant du club";
-            // 
-            // textBoxidClub
-            // 
-            this.textBoxidClub.Location = new System.Drawing.Point(174, 194);
-            this.textBoxidClub.Name = "textBoxidClub";
-            this.textBoxidClub.Size = new System.Drawing.Size(100, 20);
-            this.textBoxidClub.TabIndex = 16;
-            // 
-            // AjouterClub
+            // clubAjouter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(327, 274);
-            this.Controls.Add(this.textBoxidClub);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(327, 231);
             this.Controls.Add(this.labelEmailClub);
             this.Controls.Add(this.labelTelephoneClub);
             this.Controls.Add(this.labelVilleClub);
@@ -209,9 +188,7 @@
             this.Controls.Add(this.textBoxLienClub);
             this.Controls.Add(this.textBoxNomClub);
             this.Controls.Add(this.buttonValiderAjoutClub);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "AjouterClub";
-            this.Text = "Ajouter un club";
+            this.Name = "clubAjouter";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,7 +211,5 @@
         private System.Windows.Forms.Label labelVilleClub;
         private System.Windows.Forms.Label labelTelephoneClub;
         private System.Windows.Forms.Label labelEmailClub;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxidClub;
     }
 }

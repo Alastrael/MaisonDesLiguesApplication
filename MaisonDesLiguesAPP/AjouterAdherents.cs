@@ -14,20 +14,32 @@ namespace MaisonDesLiguesAPP
     {
         public AdherentsGerer liste;
         public DataGridView data;
-        public AjouterAdherents(AdherentsGerer liste/*, DataGridView data*/)
+
+        Connection connexion = new Connection();
+        public AjouterAdherents(AdherentsGerer liste,DataGridView data)
         {
             InitializeComponent();
             this.liste = liste;
-            //this.data = data;
+            this.data = data;
         }
         private void buttonAjouter_Click(object sender, EventArgs e)
         {
-            string nom = textBoxNOM.Text;
-            string prenom = textBoxPRENOM.Text;
-            //liste.ajouterAdherent(new Adhérents(nom, prenom, DateTime.Now));
+            Connection connexion = new Connection();
+            Adhérents ajout = new Adhérents(textBoxNOM.Text, textBoxPRENOM.Text
+                , dateNaissance.Value, textBoxAdresse.Text, textBoxCP.Text,
+                textBoxVille.Text);
+            connexion.ajouterAdherent(ajout);
+
             textBoxNOM.Text = "";
             textBoxPRENOM.Text = "";
-            
+            textBoxAdresse.Text = "";
+            textBoxCP.Text = "";
+            textBoxVille.Text = "";
+
+            data.DataSource = null;
+            data.Update();
+            data.Refresh();
+            data.DataSource = connexion.listeAdherents();
         }
     }
 }
