@@ -40,6 +40,9 @@ namespace MaisonDesLiguesAPP
             data.Update();
             data.Refresh();
             data.DataSource = connexion.listeAdherents();
+            data.Columns[0].Visible = false;
+            data.Columns[3].HeaderText = "Date de Naissance";
+            data.Columns[5].HeaderText = "Code Postal";
         }
     }
 }

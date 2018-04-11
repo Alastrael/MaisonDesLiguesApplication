@@ -117,6 +117,12 @@
     <Compile Include="SupprimerAdherents.Designer.cs">
       <DependentUpon>SupprimerAdherents.cs</DependentUpon>
     </Compile>
+    <Compile Include="SupprimerClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupprimerClub.Designer.cs">
+      <DependentUpon>SupprimerClub.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AffecterAdherent.resx">
       <DependentUpon>AffecterAdherent.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +149,9 @@
     </Compile>
     <EmbeddedResource Include="SupprimerAdherents.resx">
       <DependentUpon>SupprimerAdherents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupprimerClub.resx">
+      <DependentUpon>SupprimerClub.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

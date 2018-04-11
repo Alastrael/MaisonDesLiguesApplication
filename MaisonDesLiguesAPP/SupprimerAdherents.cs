@@ -12,48 +12,41 @@ namespace MaisonDesLiguesAPP
 {
     public partial class SupprimerAdherents : Form
     {
-        AdherentsGerer liste = new AdherentsGerer();
-        int index;
-        public SupprimerAdherents(AdherentsGerer liste)
+        Connection connexion = new Connection();
+        List<Adhérents> liste = new List<Adhérents>();
+        public SupprimerAdherents()
         {
             InitializeComponent();
-            this.liste = liste;
-        }
-
-        public void suppression(int i)
-        {
-            liste.supprimerAdherent(i);
         }
 
         private void buttonSuppression_Click(object sender, EventArgs e)
         {
-            suppression(index);
+            int positionA = listBoxSupprimerAdh.SelectedIndex;
+            liste = connexion.listeAdherents();
+            Adhérents ad = liste[positionA];
+            connexion.supprimerAdherent(ad);
             refreshListBox();
         }
 
         private void refreshListBox()
         {
-            for (int i = 0; i < listBox1.Items.Count; i++)
+            for (int i = 0; i < listBoxSupprimerAdh.Items.Count; i++)
             {
-                listBox1.Items.Remove(i);
+                listBoxSupprimerAdh.Items.Remove(i);
             }
-            listBox1.Items.Clear();
-            foreach (var item in this.liste.getAdhérents())
+            listBoxSupprimerAdh.Items.Clear();
+            foreach (var item in connexion.listeAdherents())
             {
-                listBox1.Items.Add(item.Nom + " " + item.Prenom);
+                listBoxSupprimerAdh.Items.Add(item.Nom + " " + item.Prenom);
             }
         }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            index = listBox1.SelectedIndex;
-        }
-
         private void supprimer_Load(object sender, EventArgs e)
         {
-            foreach (var item in this.liste.getAdhérents())
+            List<Adhérents> liste = new List<Adhérents>();
+            liste = connexion.listeAdherents();
+            foreach (var item in liste)
             {
-                listBox1.Items.Add(item.Nom+" "+item.Prenom);
+                listBoxSupprimerAdh.Items.Add(item.Nom+" "+item.Prenom);
             }
         }
     }

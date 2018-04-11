@@ -67,6 +67,29 @@ namespace MaisonDesLiguesAPP
             }
         }
 
+        public void supprimerAdherent(Adhérents adhérents)
+        {
+            using (MySqlConnection connexion = new MySqlConnection(connexionParams))
+            {
+                connexion.Open();
+                string requete = "DELETE FROM adherent WHERE id_adherent = @id";
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                cmd.Parameters.AddWithValue("@id", adhérents.Id);
+                cmd.ExecuteNonQuery();
+            }
+        }
+        public void supprimerClub(Club club)
+        {
+            using (MySqlConnection connexion = new MySqlConnection(connexionParams))
+            {
+                connexion.Open();
+                string requete = "DELETE FROM club WHERE id_club = @id";
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                cmd.Parameters.AddWithValue("@id", club.id);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
         public List<Adhérents> listeAdherents()
         {
             List<Adhérents> liste = new List<Adhérents>();
@@ -150,7 +173,7 @@ namespace MaisonDesLiguesAPP
 
         public void affectation(Adhérents adhérents, Club club)
         {
-            using(MySqlConnection connexion = new MySqlConnection())
+            using(MySqlConnection connexion = new MySqlConnection(connexionParams))
             {
                 connexion.Open();
                 string requete = "UPDATE adherent " +

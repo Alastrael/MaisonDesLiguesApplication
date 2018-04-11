@@ -83,7 +83,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 381);
+            this.ClientSize = new System.Drawing.Size(384, 381);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnValider);
             this.Controls.Add(this.listBoxClubs);
