@@ -44,7 +44,6 @@ namespace MaisonDesLiguesAPP
             int positionC = listBoxClubs.SelectedIndex;
             Club club = listeClub[positionC];
             //ne marche pas réellement il faut voir
-            //parler du problème de suppression de club qui a déjà des adhérents
             connexion.affectation(ad, club);
         }
     }

@@ -71,71 +71,71 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdherentsGerer.cs" />
-    <Compile Include="Adhérents.cs" />
-    <Compile Include="AffecterAdherent.cs">
+    <Compile Include="Business\AdherentsGerer.cs" />
+    <Compile Include="Business\Adhérents.cs" />
+    <Compile Include="View\AffecterAdherent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AffecterAdherent.Designer.cs">
+    <Compile Include="View\AffecterAdherent.Designer.cs">
       <DependentUpon>AffecterAdherent.cs</DependentUpon>
     </Compile>
-    <Compile Include="AjouterAdherents.cs">
+    <Compile Include="View\AjouterAdherents.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AjouterAdherents.Designer.cs">
+    <Compile Include="View\AjouterAdherents.Designer.cs">
       <DependentUpon>AjouterAdherents.cs</DependentUpon>
     </Compile>
-    <Compile Include="Club.cs" />
-    <Compile Include="AjouterClub.cs">
+    <Compile Include="Business\Club.cs" />
+    <Compile Include="View\AjouterClub.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AjouterClub.Designer.cs">
+    <Compile Include="View\AjouterClub.Designer.cs">
       <DependentUpon>AjouterClub.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClubGerer.cs" />
-    <Compile Include="Connection.cs" />
-    <Compile Include="CreationListe.cs" />
-    <Compile Include="CreationListeClub.cs" />
-    <Compile Include="PagePrincipale.cs">
+    <Compile Include="Business\ClubGerer.cs" />
+    <Compile Include="DAO\Connection.cs" />
+    <Compile Include="Business\CreationListe.cs" />
+    <Compile Include="Business\CreationListeClub.cs" />
+    <Compile Include="View\PagePrincipale.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PagePrincipale.Designer.cs">
+    <Compile Include="View\PagePrincipale.Designer.cs">
       <DependentUpon>PagePrincipale.cs</DependentUpon>
     </Compile>
-    <Compile Include="IAdhérents.cs" />
-    <Compile Include="AffichageAdherents.cs">
+    <Compile Include="Business\IAdhérents.cs" />
+    <Compile Include="View\AffichageAdherents.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AffichageAdherents.Designer.cs">
+    <Compile Include="View\AffichageAdherents.Designer.cs">
       <DependentUpon>AffichageAdherents.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SupprimerAdherents.cs">
+    <Compile Include="View\SupprimerAdherents.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SupprimerAdherents.Designer.cs">
+    <Compile Include="View\SupprimerAdherents.Designer.cs">
       <DependentUpon>SupprimerAdherents.cs</DependentUpon>
     </Compile>
-    <Compile Include="SupprimerClub.cs">
+    <Compile Include="View\SupprimerClub.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SupprimerClub.Designer.cs">
+    <Compile Include="View\SupprimerClub.Designer.cs">
       <DependentUpon>SupprimerClub.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AffecterAdherent.resx">
+    <EmbeddedResource Include="View\AffecterAdherent.resx">
       <DependentUpon>AffecterAdherent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AjouterAdherents.resx">
+    <EmbeddedResource Include="View\AjouterAdherents.resx">
       <DependentUpon>AjouterAdherents.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AjouterClub.resx">
+    <EmbeddedResource Include="View\AjouterClub.resx">
       <DependentUpon>AjouterClub.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PagePrincipale.resx">
+    <EmbeddedResource Include="View\PagePrincipale.resx">
       <DependentUpon>PagePrincipale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AffichageAdherents.resx">
+    <EmbeddedResource Include="View\AffichageAdherents.resx">
       <DependentUpon>AffichageAdherents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -147,10 +147,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SupprimerAdherents.resx">
+    <EmbeddedResource Include="View\SupprimerAdherents.resx">
       <DependentUpon>SupprimerAdherents.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SupprimerClub.resx">
+    <EmbeddedResource Include="View\SupprimerClub.resx">
       <DependentUpon>SupprimerClub.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -183,6 +183,7 @@
     <Content Include="docs\MySqlParameterCollection.xml" />
     <Content Include="docs\MySqlTransaction.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
