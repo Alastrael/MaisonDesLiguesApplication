@@ -1,5 +1,4 @@
-﻿using MaisonDesLiguesAPP.View;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -76,16 +75,10 @@ namespace MaisonDesLiguesAPP
             affectation.ShowDialog();
         }
 
-        private void gérerLesAdhérentsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void supprimerClub_Click(object sender, EventArgs e)
         {
-            GérerAdhérentsClubs gerer = new GérerAdhérentsClubs();
-            gerer.ShowDialog();
-        }
-
-        private void gérerLesÉvènementsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GérerEvents events = new GérerEvents();
-            events.ShowDialog();
+            SupprimerClub supprimerClub = new SupprimerClub(listeClub,dataClubs);
+            supprimerClub.ShowDialog();
         }
     }
 }

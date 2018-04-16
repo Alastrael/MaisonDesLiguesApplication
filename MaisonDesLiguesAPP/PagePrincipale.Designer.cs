@@ -36,12 +36,13 @@
             this.affecterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clubMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterClub = new System.Windows.Forms.ToolStripMenuItem();
-            this.gérerLesAdhérentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gérerLesÉvènementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.supprimerClub = new System.Windows.Forms.ToolStripMenuItem();
             this.dataAdherents = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.dataClubs = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.gérerLesAdhérentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gérerLesÉvènementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataAdherents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataClubs)).BeginInit();
@@ -101,6 +102,7 @@
             // 
             this.clubMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajouterClub,
+            this.supprimerClub,
             this.gérerLesAdhérentsToolStripMenuItem,
             this.gérerLesÉvènementsToolStripMenuItem});
             this.clubMenu.Name = "clubMenu";
@@ -114,19 +116,12 @@
             this.ajouterClub.Text = "Créer un nouveau club";
             this.ajouterClub.Click += new System.EventHandler(this.ajouterClub_Click);
             // 
-            // gérerLesAdhérentsToolStripMenuItem
+            // supprimerClub
             // 
-            this.gérerLesAdhérentsToolStripMenuItem.Name = "gérerLesAdhérentsToolStripMenuItem";
-            this.gérerLesAdhérentsToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
-            this.gérerLesAdhérentsToolStripMenuItem.Text = "Gérer les adhérents d\'un club";
-            this.gérerLesAdhérentsToolStripMenuItem.Click += new System.EventHandler(this.gérerLesAdhérentsToolStripMenuItem_Click);
-            // 
-            // gérerLesÉvènementsToolStripMenuItem
-            // 
-            this.gérerLesÉvènementsToolStripMenuItem.Name = "gérerLesÉvènementsToolStripMenuItem";
-            this.gérerLesÉvènementsToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
-            this.gérerLesÉvènementsToolStripMenuItem.Text = "Gérer les évènements d\'un club";
-            this.gérerLesÉvènementsToolStripMenuItem.Click += new System.EventHandler(this.gérerLesÉvènementsToolStripMenuItem_Click);
+            this.supprimerClub.Name = "supprimerClub";
+            this.supprimerClub.Size = new System.Drawing.Size(239, 22);
+            this.supprimerClub.Text = "Supprimer un club";
+            this.supprimerClub.Click += new System.EventHandler(this.supprimerClub_Click);
             // 
             // dataAdherents
             // 
@@ -172,6 +167,18 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Tous les clubs";
             // 
+            // gérerLesAdhérentsToolStripMenuItem
+            // 
+            this.gérerLesAdhérentsToolStripMenuItem.Name = "gérerLesAdhérentsToolStripMenuItem";
+            this.gérerLesAdhérentsToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.gérerLesAdhérentsToolStripMenuItem.Text = "Gérer les adhérents d\'un club";
+            // 
+            // gérerLesÉvènementsToolStripMenuItem
+            // 
+            this.gérerLesÉvènementsToolStripMenuItem.Name = "gérerLesÉvènementsToolStripMenuItem";
+            this.gérerLesÉvènementsToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.gérerLesÉvènementsToolStripMenuItem.Text = "Gérer les évènements d\'un club";
+            // 
             // PagePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,6 +211,7 @@
         private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clubMenu;
         private System.Windows.Forms.ToolStripMenuItem ajouterClub;
+        private System.Windows.Forms.ToolStripMenuItem supprimerClub;
         private System.Windows.Forms.DataGridView dataAdherents;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataClubs;

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MaisonDesLiguesAPP.Business;
 using MySql.Data.MySqlClient;
 
 namespace MaisonDesLiguesAPP
@@ -145,59 +144,6 @@ namespace MaisonDesLiguesAPP
             return liste;
         }
 
-        public List<Evenements> listeEvents(Club club)
-        {
-            List<Evenements> liste = new List<Evenements>();
-            Evenements evenements;
-            using (MySqlConnection connexion = new MySqlConnection(connexionParams))
-            {
-                connexion.Open();
-                string requete = "SELECT id_evenement, titre_evenement, debut_evenement," +
-                    " fin_evenement FROM evenement WHERE id_club = @idClub";
-                                MySqlCommand cmd = new MySqlCommand(requete, connexion);
-                cmd.Parameters.AddWithValue("@idClub", club.id);
-                cmd.ExecuteNonQuery();
-                using (MySqlDataReader datareader = cmd.ExecuteReader())
-                {
-                    while (datareader.Read())
-                    {
-                        evenements = new Evenements((string)datareader["titre_evenement"],
-                            (DateTime)datareader["debut_evenement"], (DateTime)datareader["fin_evenement"]);
-                        evenements.id = (int)datareader["id_evenement"];
-                        liste.Add(evenements);
-                    }
-                }
-            }
-            return liste;
-        }
-        public List<Adhérents> listeAdherentsInClub(Club club)
-        {
-            List<Adhérents> liste = new List<Adhérents>();
-            Adhérents adh;
-            using (MySqlConnection connexion = new MySqlConnection(connexionParams))
-            {
-                connexion.Open();
-                string requete = "SELECT id_adherent, nom_adherent, prenom_adherent, datenaissance_adherent" +
-                    ", adresse_adherent, codepostal_adherent, ville_adherent " +
-                    "FROM adherent WHERE id_club = @idClub;";
-                MySqlCommand cmd = new MySqlCommand(requete, connexion);
-                cmd.Parameters.AddWithValue("@idClub", club.id);
-                cmd.ExecuteNonQuery();
-                using (MySqlDataReader datareader = cmd.ExecuteReader())
-                {
-                    while (datareader.Read())
-                    {
-                        adh = new Adhérents((string)datareader["nom_adherent"],
-                            (string)datareader["prenom_adherent"], (DateTime)datareader["datenaissance_adherent"],
-                            (string)datareader["adresse_adherent"], (string)datareader["codepostal_adherent"],
-                            (string)datareader["ville_adherent"]);
-                        adh.Id = (int)datareader["id_adherent"];
-                        liste.Add(adh);
-                    }
-                }
-            }
-            return liste;
-        }
         public List<Adhérents> listeAdherentsSansClubs()
         {
             List<Adhérents> liste = new List<Adhérents>();
@@ -205,7 +151,7 @@ namespace MaisonDesLiguesAPP
             using (MySqlConnection connexion = new MySqlConnection(connexionParams))
             {
                 connexion.Open();
-                string requete = "SELECT id_adherent, nom_adherent, prenom_adherent, datenaissance_adherent" +
+                string requete = "SELECT nom_adherent, prenom_adherent, datenaissance_adherent" +
                     ", adresse_adherent, codepostal_adherent, ville_adherent " +
                     "FROM adherent " +
                     "WHERE id_club IS NULL;";
@@ -218,7 +164,6 @@ namespace MaisonDesLiguesAPP
                             (string)datareader["prenom_adherent"], (DateTime)datareader["datenaissance_adherent"],
                             (string)datareader["adresse_adherent"], (string)datareader["codepostal_adherent"],
                             (string)datareader["ville_adherent"]);
-                        adhérents.Id = (int)datareader["id_adherent"];
                         liste.Add(adhérents);
                     }
                 }
