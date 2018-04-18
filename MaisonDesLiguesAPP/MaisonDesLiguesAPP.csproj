@@ -109,6 +109,12 @@
     <Compile Include="View\GérerEvents.Designer.cs">
       <DependentUpon>GérerEvents.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ModifierEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ModifierEvent.Designer.cs">
+      <DependentUpon>ModifierEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\PagePrincipale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\GérerEvents.resx">
       <DependentUpon>GérerEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ModifierEvent.resx">
+      <DependentUpon>ModifierEvent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PagePrincipale.resx">
       <DependentUpon>PagePrincipale.cs</DependentUpon>

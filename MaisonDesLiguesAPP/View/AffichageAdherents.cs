@@ -12,18 +12,20 @@ namespace MaisonDesLiguesAPP
 {
     public partial class AffichageAdherents : Form
     {
-        public AdherentsGerer liste;
-        public AffichageAdherents(AdherentsGerer liste)
+        Connection connexion = new Connection();
+        List<Adhérents> adh;
+        public AffichageAdherents()
         {
             InitializeComponent();
-            this.liste = liste;
         }
 
         private void ListerForm_Load(object sender, EventArgs e)
         {
-            dataGridLister.AutoGenerateColumns = true;
-            dataGridLister.AutoResizeColumns();
-            dataGridLister.DataSource = liste.getAdhérents();
+            adh = connexion.listeAdherents();
+            foreach (var item in adh)
+            {
+                listBoxadh.Items.Add(item.Nom + " " + item.Prenom);
+            }
         }
     }
 }

@@ -34,6 +34,18 @@ namespace MaisonDesLiguesAPP.View
         private void btnValider_Click(object sender, EventArgs e)
         {
             int positionC = listBoxClubs.SelectedIndex;
+            listeEvents = connexion.listeEvents(listeClub[positionC]);
+            foreach (var item in listeEvents)
+            {
+                listBoxEvents.Items.Add(item.titre);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int positionA = listBoxEvents.SelectedIndex;
+            ModifierEvent modifier = new ModifierEvent(listeEvents[positionA]);
+            modifier.ShowDialog();
         }
     }
 }

@@ -28,34 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridLister = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridLister)).BeginInit();
+            this.listBoxadh = new System.Windows.Forms.ListBox();
+            this.btnValider = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // dataGridLister
+            // listBoxadh
             // 
-            this.dataGridLister.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridLister.Location = new System.Drawing.Point(12, 12);
-            this.dataGridLister.Name = "dataGridLister";
-            this.dataGridLister.Size = new System.Drawing.Size(349, 217);
-            this.dataGridLister.TabIndex = 0;
+            this.listBoxadh.FormattingEnabled = true;
+            this.listBoxadh.Location = new System.Drawing.Point(12, 12);
+            this.listBoxadh.Name = "listBoxadh";
+            this.listBoxadh.Size = new System.Drawing.Size(159, 147);
+            this.listBoxadh.TabIndex = 0;
             // 
-            // ListerForm
+            // btnValider
+            // 
+            this.btnValider.Location = new System.Drawing.Point(177, 12);
+            this.btnValider.Name = "btnValider";
+            this.btnValider.Size = new System.Drawing.Size(75, 23);
+            this.btnValider.TabIndex = 1;
+            this.btnValider.Text = "Valider";
+            this.btnValider.UseVisualStyleBackColor = true;
+            // 
+            // AffichageAdherents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(373, 241);
-            this.Controls.Add(this.dataGridLister);
-            this.Name = "ListerForm";
+            this.ClientSize = new System.Drawing.Size(462, 282);
+            this.Controls.Add(this.btnValider);
+            this.Controls.Add(this.listBoxadh);
+            this.Name = "AffichageAdherents";
             this.Text = "ListerForm";
             this.Load += new System.EventHandler(this.ListerForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridLister)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridLister;
+        private System.Windows.Forms.ListBox listBoxadh;
+        private System.Windows.Forms.Button btnValider;
     }
 }

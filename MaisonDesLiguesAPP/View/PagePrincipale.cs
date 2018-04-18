@@ -54,7 +54,7 @@ namespace MaisonDesLiguesAPP
 
         private void ListerToolTipMenuStrip_Click(object sender, EventArgs e)
         {
-            AffichageAdherents Lister = new AffichageAdherents(liste);
+            AffichageAdherents Lister = new AffichageAdherents();
             Lister.ShowDialog();
         }
 
