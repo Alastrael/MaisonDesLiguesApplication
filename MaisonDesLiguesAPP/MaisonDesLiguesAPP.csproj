@@ -97,6 +97,12 @@
     <Compile Include="DAO\Connection.cs" />
     <Compile Include="Business\CreationListe.cs" />
     <Compile Include="Business\CreationListeClub.cs" />
+    <Compile Include="View\AjouterEvenement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AjouterEvenement.Designer.cs">
+      <DependentUpon>AjouterEvenement.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\GérerAdhérentsClubs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\AjouterClub.resx">
       <DependentUpon>AjouterClub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AjouterEvenement.resx">
+      <DependentUpon>AjouterEvenement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\GérerAdhérentsClubs.resx">
       <DependentUpon>GérerAdhérentsClubs.cs</DependentUpon>

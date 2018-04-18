@@ -67,6 +67,21 @@ namespace MaisonDesLiguesAPP
                 cmd.ExecuteNonQuery();
             }
         }
+        public void ajouterEvenement(Evenements even, Club club)
+        {
+            using (MySqlConnection connexion = new MySqlConnection(connexionParams))
+            {
+                connexion.Open();
+                string requete = "INSERT INTO evenement (id_evenement, titre_evenement, debut_evenement, " +
+                    "fin_evenement, id_club) VALUES (NULL, @titre, @debut, @fin, @id);";
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                cmd.Parameters.AddWithValue("@titre", even.titre);
+                cmd.Parameters.AddWithValue("@debut", even.debut);
+                cmd.Parameters.AddWithValue("@fin", even.fin);
+                cmd.Parameters.AddWithValue("@id", club.id);
+                cmd.ExecuteNonQuery();
+            }
+        }
 
         public void supprimerAdherent(Adhérents adhérents)
         {
@@ -87,6 +102,17 @@ namespace MaisonDesLiguesAPP
                 string requete = "DELETE FROM club WHERE id_club = @id";
                 MySqlCommand cmd = new MySqlCommand(requete, connexion);
                 cmd.Parameters.AddWithValue("@id", club.id);
+                cmd.ExecuteNonQuery();
+            }
+        }
+        public void supprimerEvent(Evenements even)
+        {
+            using (MySqlConnection connexion = new MySqlConnection(connexionParams))
+            {
+                connexion.Open();
+                string requete = "DELETE FROM evenement WHERE id_evenement = @id";
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                cmd.Parameters.AddWithValue("@id", even.id);
                 cmd.ExecuteNonQuery();
             }
         }
@@ -237,6 +263,25 @@ namespace MaisonDesLiguesAPP
                 MySqlCommand cmd = new MySqlCommand(requete, connexion);
                 cmd.Parameters.AddWithValue("@idClub", club.id);
                 cmd.Parameters.AddWithValue("@idAdherent", adhérents.Id);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void modifierEvent(Evenements even)
+        {
+            using (MySqlConnection connexion = new MySqlConnection(connexionParams))
+            {
+                connexion.Open();
+                string requete = "UPDATE evenement " +
+                    "SET titre_evenement = @titre, " +
+                    "debut_evenement = @debut, " +
+                    "fin_evenement = @fin " +
+                    "WHERE id_evenement = @id;";
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                cmd.Parameters.AddWithValue("@titre", even.titre);
+                cmd.Parameters.AddWithValue("@debut", even.debut);
+                cmd.Parameters.AddWithValue("@fin", even.fin);
+                cmd.Parameters.AddWithValue("@id", even.id);
                 cmd.ExecuteNonQuery();
             }
         }
