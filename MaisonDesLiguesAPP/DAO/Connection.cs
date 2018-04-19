@@ -266,6 +266,20 @@ namespace MaisonDesLiguesAPP
                 cmd.ExecuteNonQuery();
             }
         }
+        public void affecterAdhToEvent(Adhérents adh, Evenements even)
+        {
+            using (MySqlConnection connexion = new MySqlConnection(connexionParams))
+            {
+                /*connexion.Open();
+                string requete = "UPDATE adherent " +
+                    "SET id_club = @idClub " +
+                    "WHERE id_adherent = @idAdherent;";
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                cmd.Parameters.AddWithValue("@idClub", club.id);
+                cmd.Parameters.AddWithValue("@idAdherent", adhérents.Id);
+                cmd.ExecuteNonQuery();*/
+            }
+        }
 
         public void modifierEvent(Evenements even)
         {

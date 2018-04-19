@@ -70,5 +70,13 @@ namespace MaisonDesLiguesAPP.View
             AjouterEvenement ajouterEvenement = new AjouterEvenement();
             ajouterEvenement.ShowDialog();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            int positionA = listBoxEvents.SelectedIndex;
+            int positionC = listBoxClubs.SelectedIndex;
+            AffecterAdhEvent affect = new AffecterAdhEvent(listeClub[positionC],listeEvents[positionA]);
+            affect.ShowDialog();
+        }
     }
 }

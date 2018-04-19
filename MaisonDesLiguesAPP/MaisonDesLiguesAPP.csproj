@@ -80,6 +80,12 @@
     <Compile Include="View\AffecterAdherent.Designer.cs">
       <DependentUpon>AffecterAdherent.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\AffecterAdhEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AffecterAdhEvent.Designer.cs">
+      <DependentUpon>AffecterAdhEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\AjouterAdherents.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </Compile>
     <EmbeddedResource Include="View\AffecterAdherent.resx">
       <DependentUpon>AffecterAdherent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AffecterAdhEvent.resx">
+      <DependentUpon>AffecterAdhEvent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AjouterAdherents.resx">
       <DependentUpon>AjouterAdherents.cs</DependentUpon>
