@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Button btnCréer;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AjouterEvenement));
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpFin = new System.Windows.Forms.DateTimePicker();
@@ -42,7 +43,7 @@
             // 
             // btnCréer
             // 
-            btnCréer.Location = new System.Drawing.Point(219, 282);
+            btnCréer.Location = new System.Drawing.Point(219, 275);
             btnCréer.Name = "btnCréer";
             btnCréer.Size = new System.Drawing.Size(90, 40);
             btnCréer.TabIndex = 13;
@@ -53,55 +54,58 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(341, 84);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(317, 82);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(134, 13);
+            this.label3.Size = new System.Drawing.Size(167, 16);
             this.label3.TabIndex = 12;
             this.label3.Text = "Date de fin de l\'évènement";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 84);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(26, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 13);
+            this.label2.Size = new System.Drawing.Size(187, 16);
             this.label2.TabIndex = 11;
             this.label2.Text = "Date du début de l\'évènement";
             // 
             // dtpFin
             // 
-            this.dtpFin.Location = new System.Drawing.Point(306, 100);
+            this.dtpFin.Location = new System.Drawing.Point(295, 100);
             this.dtpFin.Name = "dtpFin";
-            this.dtpFin.Size = new System.Drawing.Size(199, 20);
+            this.dtpFin.Size = new System.Drawing.Size(210, 20);
             this.dtpFin.TabIndex = 10;
             // 
             // dtpDebut
             // 
-            this.dtpDebut.Location = new System.Drawing.Point(29, 100);
+            this.dtpDebut.Location = new System.Drawing.Point(12, 100);
             this.dtpDebut.Name = "dtpDebut";
-            this.dtpDebut.Size = new System.Drawing.Size(200, 20);
+            this.dtpDebut.Size = new System.Drawing.Size(209, 20);
             this.dtpDebut.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(216, 24);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(200, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 13);
+            this.label1.Size = new System.Drawing.Size(130, 16);
             this.label1.TabIndex = 8;
             this.label1.Text = "Titre de l\'évènement";
             // 
             // maskTitre
             // 
-            this.maskTitre.Location = new System.Drawing.Point(29, 40);
+            this.maskTitre.Location = new System.Drawing.Point(12, 40);
             this.maskTitre.Name = "maskTitre";
-            this.maskTitre.Size = new System.Drawing.Size(476, 20);
+            this.maskTitre.Size = new System.Drawing.Size(493, 20);
             this.maskTitre.TabIndex = 7;
             // 
             // listBoxclub
             // 
             this.listBoxclub.FormattingEnabled = true;
-            this.listBoxclub.Location = new System.Drawing.Point(185, 148);
+            this.listBoxclub.Location = new System.Drawing.Point(175, 146);
             this.listBoxclub.Name = "listBoxclub";
             this.listBoxclub.Size = new System.Drawing.Size(189, 121);
             this.listBoxclub.TabIndex = 14;
@@ -109,9 +113,10 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(182, 132);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(163, 127);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(173, 13);
+            this.label4.Size = new System.Drawing.Size(213, 16);
             this.label4.TabIndex = 15;
             this.label4.Text = "Cet évènement appartient au club :";
             // 
@@ -119,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 334);
+            this.ClientSize = new System.Drawing.Size(517, 322);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.listBoxclub);
             this.Controls.Add(btnCréer);
@@ -129,8 +134,9 @@
             this.Controls.Add(this.dtpDebut);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.maskTitre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AjouterEvenement";
-            this.Text = "AjouterEvenement";
+            this.Text = "Ajouter un Evènement";
             this.Load += new System.EventHandler(this.AjouterEvenement_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -114,7 +114,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "GérerEvents";
-            this.Text = "GérerEvents";
+            this.Text = "Gérer les Evènements";
             this.Load += new System.EventHandler(this.GérerEvents_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

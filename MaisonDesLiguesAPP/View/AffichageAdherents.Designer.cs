@@ -53,11 +53,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 282);
+            this.ClientSize = new System.Drawing.Size(303, 187);
             this.Controls.Add(this.btnValider);
             this.Controls.Add(this.listBoxadh);
             this.Name = "AffichageAdherents";
-            this.Text = "ListerForm";
+            this.Text = "Infos Adhérent";
             this.Load += new System.EventHandler(this.ListerForm_Load);
             this.ResumeLayout(false);
 
