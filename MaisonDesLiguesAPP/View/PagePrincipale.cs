@@ -11,45 +11,44 @@ using System.Windows.Forms;
 
 namespace MaisonDesLiguesAPP
 {
-    public partial class PagePrincipale : Form
+    public partial class PagePrincipale : MetroFramework.Forms.MetroForm
     {
-        AdherentsGerer liste;
+        List<Adhérents>liste;
         ClubGerer listeClub;
         Connection connexion = new Connection();
         public PagePrincipale()
         {
             InitializeComponent();
-            this.liste = new AdherentsGerer();
+            this.liste = new List<Adhérents>();
             this.listeClub = new ClubGerer();
         }
 
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AjouterAdherents ajouter = new AjouterAdherents(liste,dataAdherents);
-            ajouter.ShowDialog();    
+  
         }
 
         private void PagePrincipale_Load(object sender, EventArgs e)
         {
-            dataAdherents.AutoGenerateColumns = true;
-            dataAdherents.AutoResizeColumns();
-            dataAdherents.DataSource = connexion.listeAdherents();
-            dataAdherents.Columns[0].Visible = false;
-            dataAdherents.Columns[3].HeaderText = "Date de Naissance";
-            dataAdherents.Columns[5].HeaderText = "Code Postal";
-
-            dataClubs.AutoGenerateColumns = true;
-            dataClubs.AutoResizeColumns();
-            dataClubs.DataSource = connexion.listeClubs();
-            dataClubs.Columns[0].Visible = false;
-            dataClubs.Columns[8].Visible = false;
-            dataClubs.Columns[1].HeaderText = "Nom du club";
-            dataClubs.Columns[2].HeaderText = "Lien du site du club";
-            dataClubs.Columns[3].HeaderText = "Adresse";
-            dataClubs.Columns[4].HeaderText = "Code Postal";
-            dataClubs.Columns[5].HeaderText = "Ville";
-            dataClubs.Columns[6].HeaderText = "Téléphone";
-            dataClubs.Columns[7].HeaderText = "Email";
+            //dataAdherents.AutoGenerateColumns = true;
+            //dataAdherents.AutoResizeColumns();
+            //dataAdherents.DataSource = connexion.listeAdherents();
+            //dataAdherents.Columns[0].Visible = false;
+            //dataAdherents.Columns[3].HeaderText = "Date de Naissance";
+            //dataAdherents.Columns[5].HeaderText = "Code Postal";
+            
+            //dataClubs.AutoGenerateColumns = true;
+            //dataClubs.AutoResizeColumns();
+            //dataClubs.DataSource = connexion.listeClubs();
+            //dataClubs.Columns[0].Visible = false;
+            //dataClubs.Columns[8].Visible = false;
+            //dataClubs.Columns[1].HeaderText = "Nom du club";
+            //dataClubs.Columns[2].HeaderText = "Lien du site du club";
+            //dataClubs.Columns[3].HeaderText = "Adresse";
+            //dataClubs.Columns[4].HeaderText = "Code Postal";
+            //dataClubs.Columns[5].HeaderText = "Ville";
+            //dataClubs.Columns[6].HeaderText = "Téléphone";
+            //dataClubs.Columns[7].HeaderText = "Email";
         }
 
         private void ListerToolTipMenuStrip_Click(object sender, EventArgs e)
@@ -66,7 +65,7 @@ namespace MaisonDesLiguesAPP
 
         private void ajouterClub_Click(object sender, EventArgs e)
         {
-            AjouterClub ajoutClub = new AjouterClub(listeClub,dataClubs);
+            AjouterClub ajoutClub = new AjouterClub(listeClub/*,dataClubs*/);
             ajoutClub.ShowDialog();
         }
 
@@ -86,6 +85,22 @@ namespace MaisonDesLiguesAPP
         {
             GérerEvents events = new GérerEvents();
             events.ShowDialog();
+        }
+
+        private void metroTileAdh_MouseEnter(object sender, EventArgs e)
+        {
+            metroTileAdh.Style = MetroFramework.MetroColorStyle.Brown;
+        }
+
+        private void metroTileAdh_MouseLeave(object sender, EventArgs e)
+        {
+            metroTileAdh.Style = MetroFramework.MetroColorStyle.Orange;
+        }
+
+        private void metroTileAdh_Click(object sender, EventArgs e)
+        {
+            MenuAdhérent menuAdhérent = new MenuAdhérent(liste);
+            menuAdhérent.ShowDialog();
         }
     }
 }

@@ -170,6 +170,28 @@ namespace MaisonDesLiguesAPP
             }
             return liste;
         }
+        public List<TypeClub> listeTypeClub()
+        {
+            List<TypeClub> liste = new List<TypeClub>();
+            TypeClub type;
+            using (MySqlConnection connexion = new MySqlConnection(connexionParams))
+            {
+                connexion.Open();
+                string requete = "SELECT id_type_club, libelle " +
+                    "FROM type_club;";
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                using (MySqlDataReader datareader = cmd.ExecuteReader())
+                {
+                    while (datareader.Read())
+                    {
+                        type = new TypeClub((string)datareader["libelle"]);
+                        liste.Add(type);
+                        type.id_type_club = (int)datareader["id_type_club"];
+                    }
+                }
+            }
+            return liste;
+        }
 
         public List<Evenements> listeEvents(Club club)
         {

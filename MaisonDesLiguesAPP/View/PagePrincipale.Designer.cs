@@ -38,23 +38,22 @@
             this.ajouterClub = new System.Windows.Forms.ToolStripMenuItem();
             this.gérerLesAdhérentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gérerLesÉvènementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataAdherents = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataClubs = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
+            this.metroTileAdh = new MetroFramework.Controls.MetroTile();
+            this.metroTileClub = new MetroFramework.Controls.MetroTile();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataAdherents)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataClubs)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.menuStrip1.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adhérentsToolStripMenuItem,
             this.clubMenu});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(292, 60);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(425, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 40, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(124, 330);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -66,34 +65,34 @@
             this.supprimerToolStripMenuItem,
             this.affecterToolStripMenuItem});
             this.adhérentsToolStripMenuItem.Name = "adhérentsToolStripMenuItem";
-            this.adhérentsToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.adhérentsToolStripMenuItem.Size = new System.Drawing.Size(111, 27);
             this.adhérentsToolStripMenuItem.Text = "Adhérents";
             // 
             // ajouterToolStripMenuItem
             // 
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(281, 22);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(455, 28);
             this.ajouterToolStripMenuItem.Text = "Créer un nouvel adhérent";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
             // ListerToolTipMenuStrip
             // 
             this.ListerToolTipMenuStrip.Name = "ListerToolTipMenuStrip";
-            this.ListerToolTipMenuStrip.Size = new System.Drawing.Size(281, 22);
+            this.ListerToolTipMenuStrip.Size = new System.Drawing.Size(455, 28);
             this.ListerToolTipMenuStrip.Text = "Afficher les informations d\'un adhérent";
             this.ListerToolTipMenuStrip.Click += new System.EventHandler(this.ListerToolTipMenuStrip_Click);
             // 
             // supprimerToolStripMenuItem
             // 
             this.supprimerToolStripMenuItem.Name = "supprimerToolStripMenuItem";
-            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(281, 22);
+            this.supprimerToolStripMenuItem.Size = new System.Drawing.Size(455, 28);
             this.supprimerToolStripMenuItem.Text = "Supprimer un adhérent";
             this.supprimerToolStripMenuItem.Click += new System.EventHandler(this.supprimerToolStripMenuItem_Click);
             // 
             // affecterToolStripMenuItem
             // 
             this.affecterToolStripMenuItem.Name = "affecterToolStripMenuItem";
-            this.affecterToolStripMenuItem.Size = new System.Drawing.Size(281, 22);
+            this.affecterToolStripMenuItem.Size = new System.Drawing.Size(455, 28);
             this.affecterToolStripMenuItem.Text = "Affecter un adhérent à un club";
             this.affecterToolStripMenuItem.Click += new System.EventHandler(this.affecterToolStripMenuItem_Click);
             // 
@@ -104,92 +103,76 @@
             this.gérerLesAdhérentsToolStripMenuItem,
             this.gérerLesÉvènementsToolStripMenuItem});
             this.clubMenu.Name = "clubMenu";
-            this.clubMenu.Size = new System.Drawing.Size(49, 20);
+            this.clubMenu.Size = new System.Drawing.Size(111, 27);
             this.clubMenu.Text = "Clubs";
             // 
             // ajouterClub
             // 
             this.ajouterClub.Name = "ajouterClub";
-            this.ajouterClub.Size = new System.Drawing.Size(239, 22);
+            this.ajouterClub.Size = new System.Drawing.Size(383, 28);
             this.ajouterClub.Text = "Créer un nouveau club";
             this.ajouterClub.Click += new System.EventHandler(this.ajouterClub_Click);
             // 
             // gérerLesAdhérentsToolStripMenuItem
             // 
             this.gérerLesAdhérentsToolStripMenuItem.Name = "gérerLesAdhérentsToolStripMenuItem";
-            this.gérerLesAdhérentsToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.gérerLesAdhérentsToolStripMenuItem.Size = new System.Drawing.Size(383, 28);
             this.gérerLesAdhérentsToolStripMenuItem.Text = "Gérer les adhérents d\'un club";
             this.gérerLesAdhérentsToolStripMenuItem.Click += new System.EventHandler(this.gérerLesAdhérentsToolStripMenuItem_Click);
             // 
             // gérerLesÉvènementsToolStripMenuItem
             // 
             this.gérerLesÉvènementsToolStripMenuItem.Name = "gérerLesÉvènementsToolStripMenuItem";
-            this.gérerLesÉvènementsToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
+            this.gérerLesÉvènementsToolStripMenuItem.Size = new System.Drawing.Size(383, 28);
             this.gérerLesÉvènementsToolStripMenuItem.Text = "Gérer les évènements d\'un club";
             this.gérerLesÉvènementsToolStripMenuItem.Click += new System.EventHandler(this.gérerLesÉvènementsToolStripMenuItem_Click);
             // 
-            // dataAdherents
+            // metroTileAdh
             // 
-            this.dataAdherents.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataAdherents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataAdherents.Location = new System.Drawing.Point(12, 61);
-            this.dataAdherents.Name = "dataAdherents";
-            this.dataAdherents.Size = new System.Drawing.Size(397, 150);
-            this.dataAdherents.TabIndex = 1;
+            this.metroTileAdh.BackColor = System.Drawing.Color.Black;
+            this.metroTileAdh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileAdh.Location = new System.Drawing.Point(23, 63);
+            this.metroTileAdh.Name = "metroTileAdh";
+            this.metroTileAdh.Size = new System.Drawing.Size(112, 84);
+            this.metroTileAdh.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroTileAdh.TabIndex = 4;
+            this.metroTileAdh.Text = "Adhérent";
+            this.metroTileAdh.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileAdh.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTileAdh.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroTileAdh.Click += new System.EventHandler(this.metroTileAdh_Click);
+            this.metroTileAdh.MouseEnter += new System.EventHandler(this.metroTileAdh_MouseEnter);
+            this.metroTileAdh.MouseLeave += new System.EventHandler(this.metroTileAdh_MouseLeave);
             // 
-            // label1
+            // metroTileClub
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(145, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Tous les adhérents";
-            // 
-            // dataClubs
-            // 
-            this.dataClubs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataClubs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataClubs.Location = new System.Drawing.Point(12, 248);
-            this.dataClubs.Name = "dataClubs";
-            this.dataClubs.Size = new System.Drawing.Size(397, 150);
-            this.dataClubs.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(160, 225);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Tous les clubs";
+            this.metroTileClub.BackColor = System.Drawing.Color.Black;
+            this.metroTileClub.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileClub.Location = new System.Drawing.Point(153, 63);
+            this.metroTileClub.Name = "metroTileClub";
+            this.metroTileClub.Size = new System.Drawing.Size(112, 84);
+            this.metroTileClub.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroTileClub.TabIndex = 5;
+            this.metroTileClub.Text = "Clubs";
+            this.metroTileClub.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileClub.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTileClub.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             // 
             // PagePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(425, 410);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataClubs);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataAdherents);
+            this.ClientSize = new System.Drawing.Size(436, 410);
+            this.Controls.Add(this.metroTileClub);
+            this.Controls.Add(this.metroTileAdh);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "PagePrincipale";
             this.Text = "Maison des Ligues";
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.PagePrincipale_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataAdherents)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataClubs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,13 +187,11 @@
         private System.Windows.Forms.ToolStripMenuItem supprimerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clubMenu;
         private System.Windows.Forms.ToolStripMenuItem ajouterClub;
-        private System.Windows.Forms.DataGridView dataAdherents;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataClubs;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem affecterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gérerLesAdhérentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gérerLesÉvènementsToolStripMenuItem;
+        private MetroFramework.Controls.MetroTile metroTileAdh;
+        private MetroFramework.Controls.MetroTile metroTileClub;
     }
 }
 

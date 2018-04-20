@@ -12,11 +12,11 @@ namespace MaisonDesLiguesAPP
 {
     public partial class AjouterAdherents : Form
     {
-        public AdherentsGerer liste;
-        public DataGridView data;
+        private List<Adhérents> liste { get; set; }
+        private DataGridView data { get; set; }
 
         Connection connexion = new Connection();
-        public AjouterAdherents(AdherentsGerer liste,DataGridView data)
+        public AjouterAdherents(List<Adhérents>liste,DataGridView data)
         {
             InitializeComponent();
             this.liste = liste;

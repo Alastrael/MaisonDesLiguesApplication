@@ -35,6 +35,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.6.10.6\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
@@ -74,6 +84,7 @@
     <Compile Include="Business\AdherentsGerer.cs" />
     <Compile Include="Business\Adhérents.cs" />
     <Compile Include="Business\Evenements.cs" />
+    <Compile Include="Business\TypeClub.cs" />
     <Compile Include="View\AffecterAdherent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +131,12 @@
     </Compile>
     <Compile Include="View\GérerEvents.Designer.cs">
       <DependentUpon>GérerEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MenuAdhérent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MenuAdhérent.Designer.cs">
+      <DependentUpon>MenuAdhérent.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ModifierEvent.cs">
       <SubType>Form</SubType>
@@ -169,6 +186,9 @@
     <EmbeddedResource Include="View\GérerEvents.resx">
       <DependentUpon>GérerEvents.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\MenuAdhérent.resx">
+      <DependentUpon>MenuAdhérent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ModifierEvent.resx">
       <DependentUpon>ModifierEvent.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +206,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\SupprimerAdherents.resx">
       <DependentUpon>SupprimerAdherents.cs</DependentUpon>
@@ -219,8 +240,11 @@
     <Content Include="docs\MySqlParameter.xml" />
     <Content Include="docs\MySqlParameterCollection.xml" />
     <Content Include="docs\MySqlTransaction.xml" />
+    <Content Include="MetroFramework.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
