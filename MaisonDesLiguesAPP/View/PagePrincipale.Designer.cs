@@ -38,8 +38,8 @@
             this.ajouterClub = new System.Windows.Forms.ToolStripMenuItem();
             this.gérerLesAdhérentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gérerLesÉvènementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.metroTileAdh = new MetroFramework.Controls.MetroTile();
             this.metroTileClub = new MetroFramework.Controls.MetroTile();
+            this.metroTileAdh = new MetroFramework.Controls.MetroTile();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,10 +50,10 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adhérentsToolStripMenuItem,
             this.clubMenu});
-            this.menuStrip1.Location = new System.Drawing.Point(292, 60);
+            this.menuStrip1.Location = new System.Drawing.Point(326, 60);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 40, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(124, 330);
+            this.menuStrip1.Size = new System.Drawing.Size(124, 357);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -127,42 +127,44 @@
             this.gérerLesÉvènementsToolStripMenuItem.Text = "Gérer les évènements d\'un club";
             this.gérerLesÉvènementsToolStripMenuItem.Click += new System.EventHandler(this.gérerLesÉvènementsToolStripMenuItem_Click);
             // 
-            // metroTileAdh
-            // 
-            this.metroTileAdh.BackColor = System.Drawing.Color.Black;
-            this.metroTileAdh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTileAdh.Location = new System.Drawing.Point(23, 63);
-            this.metroTileAdh.Name = "metroTileAdh";
-            this.metroTileAdh.Size = new System.Drawing.Size(112, 84);
-            this.metroTileAdh.Style = MetroFramework.MetroColorStyle.Orange;
-            this.metroTileAdh.TabIndex = 4;
-            this.metroTileAdh.Text = "Adhérent";
-            this.metroTileAdh.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTileAdh.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTileAdh.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.metroTileAdh.Click += new System.EventHandler(this.metroTileAdh_Click);
-            this.metroTileAdh.MouseEnter += new System.EventHandler(this.metroTileAdh_MouseEnter);
-            this.metroTileAdh.MouseLeave += new System.EventHandler(this.metroTileAdh_MouseLeave);
-            // 
             // metroTileClub
             // 
             this.metroTileClub.BackColor = System.Drawing.Color.Black;
             this.metroTileClub.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTileClub.Location = new System.Drawing.Point(153, 63);
+            this.metroTileClub.Location = new System.Drawing.Point(205, 63);
             this.metroTileClub.Name = "metroTileClub";
-            this.metroTileClub.Size = new System.Drawing.Size(112, 84);
+            this.metroTileClub.Size = new System.Drawing.Size(68, 67);
             this.metroTileClub.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroTileClub.TabIndex = 5;
             this.metroTileClub.Text = "Clubs";
+            this.metroTileClub.TileImage = global::MaisonDesLiguesAPP.Properties.Resources.group;
             this.metroTileClub.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTileClub.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.metroTileClub.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroTileClub.UseTileImage = true;
+            // 
+            // metroTileAdh
+            // 
+            this.metroTileAdh.BackColor = System.Drawing.Color.Black;
+            this.metroTileAdh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileAdh.Location = new System.Drawing.Point(23, 60);
+            this.metroTileAdh.Name = "metroTileAdh";
+            this.metroTileAdh.Size = new System.Drawing.Size(78, 70);
+            this.metroTileAdh.Style = MetroFramework.MetroColorStyle.Orange;
+            this.metroTileAdh.TabIndex = 4;
+            this.metroTileAdh.Text = "Adhérent";
+            this.metroTileAdh.TileImage = global::MaisonDesLiguesAPP.Properties.Resources.l;
+            this.metroTileAdh.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileAdh.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroTileAdh.UseTileImage = true;
+            this.metroTileAdh.Click += new System.EventHandler(this.metroTileAdh_Click);
+            this.metroTileAdh.MouseEnter += new System.EventHandler(this.metroTileAdh_MouseEnter);
+            this.metroTileAdh.MouseLeave += new System.EventHandler(this.metroTileAdh_MouseLeave);
             // 
             // PagePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 410);
+            this.ClientSize = new System.Drawing.Size(470, 437);
             this.Controls.Add(this.metroTileClub);
             this.Controls.Add(this.metroTileAdh);
             this.Controls.Add(this.menuStrip1);

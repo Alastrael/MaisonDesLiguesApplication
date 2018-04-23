@@ -33,11 +33,13 @@
             this.metroTileAffecter = new MetroFramework.Controls.MetroTile();
             this.metroTileSupprimer = new MetroFramework.Controls.MetroTile();
             this.dataAdherent = new System.Windows.Forms.DataGridView();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.dataAdherent)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTileCreer
             // 
+            this.metroTileCreer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroTileCreer.Location = new System.Drawing.Point(23, 77);
             this.metroTileCreer.Name = "metroTileCreer";
             this.metroTileCreer.Size = new System.Drawing.Size(113, 89);
@@ -51,7 +53,8 @@
             // 
             // metroTileModifier
             // 
-            this.metroTileModifier.Location = new System.Drawing.Point(186, 77);
+            this.metroTileModifier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileModifier.Location = new System.Drawing.Point(183, 77);
             this.metroTileModifier.Name = "metroTileModifier";
             this.metroTileModifier.Size = new System.Drawing.Size(113, 89);
             this.metroTileModifier.Style = MetroFramework.MetroColorStyle.Orange;
@@ -62,7 +65,8 @@
             // 
             // metroTileAffecter
             // 
-            this.metroTileAffecter.Location = new System.Drawing.Point(350, 77);
+            this.metroTileAffecter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTileAffecter.Location = new System.Drawing.Point(349, 77);
             this.metroTileAffecter.Name = "metroTileAffecter";
             this.metroTileAffecter.Size = new System.Drawing.Size(113, 89);
             this.metroTileAffecter.Style = MetroFramework.MetroColorStyle.Orange;
@@ -75,6 +79,7 @@
             // 
             // metroTileSupprimer
             // 
+            this.metroTileSupprimer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroTileSupprimer.Location = new System.Drawing.Point(509, 77);
             this.metroTileSupprimer.Name = "metroTileSupprimer";
             this.metroTileSupprimer.Size = new System.Drawing.Size(113, 89);
@@ -83,6 +88,8 @@
             this.metroTileSupprimer.Text = "Supprimer";
             this.metroTileSupprimer.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTileSupprimer.Click += new System.EventHandler(this.metroTileSupprimer_Click);
+            this.metroTileSupprimer.MouseEnter += new System.EventHandler(this.metroTileSupprimer_MouseEnter);
+            this.metroTileSupprimer.MouseLeave += new System.EventHandler(this.metroTileSupprimer_MouseLeave);
             // 
             // dataAdherent
             // 
@@ -93,11 +100,23 @@
             this.dataAdherent.Size = new System.Drawing.Size(599, 205);
             this.dataAdherent.TabIndex = 4;
             // 
+            // metroTile1
+            // 
+            this.metroTile1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroTile1.Location = new System.Drawing.Point(374, 394);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(248, 31);
+            this.metroTile1.Style = MetroFramework.MetroColorStyle.Teal;
+            this.metroTile1.TabIndex = 5;
+            this.metroTile1.Text = "Afficher les informations d\'un salarié";
+            this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            // 
             // MenuAdhérent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 411);
+            this.ClientSize = new System.Drawing.Size(651, 444);
+            this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.dataAdherent);
             this.Controls.Add(this.metroTileSupprimer);
             this.Controls.Add(this.metroTileAffecter);
@@ -119,5 +138,6 @@
         private MetroFramework.Controls.MetroTile metroTileAffecter;
         private MetroFramework.Controls.MetroTile metroTileSupprimer;
         private System.Windows.Forms.DataGridView dataAdherent;
+        private MetroFramework.Controls.MetroTile metroTile1;
     }
 }

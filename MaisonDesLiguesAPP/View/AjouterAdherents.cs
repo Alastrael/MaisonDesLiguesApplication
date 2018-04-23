@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MaterialSkin;
+using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +12,7 @@ using System.Windows.Forms;
 
 namespace MaisonDesLiguesAPP
 {
-    public partial class AjouterAdherents : Form
+    public partial class AjouterAdherents : MaterialForm
     {
         private List<Adhérents> liste { get; set; }
         private DataGridView data { get; set; }
@@ -19,6 +21,11 @@ namespace MaisonDesLiguesAPP
         public AjouterAdherents(List<Adhérents>liste,DataGridView data)
         {
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
+
             this.liste = liste;
             this.data = data;
         }

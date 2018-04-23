@@ -35,24 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
-      <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
-    </Reference>
-    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MaterialSkin.Net4.1.0.0\lib\net40\MaterialSkin.dll</HintPath>
-    </Reference>
-    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
-    </Reference>
-    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.8.0.11\lib\net452\MySql.Data.dll</HintPath>
+    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.10.6\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel" />
@@ -90,7 +74,6 @@
     <Compile Include="Business\AdherentsGerer.cs" />
     <Compile Include="Business\Adhérents.cs" />
     <Compile Include="Business\Evenements.cs" />
-    <Compile Include="Business\TypeClub.cs" />
     <Compile Include="View\AffecterAdherent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,18 +120,6 @@
     </Compile>
     <Compile Include="View\GérerEvents.Designer.cs">
       <DependentUpon>GérerEvents.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\MenuAdhérent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\MenuAdhérent.Designer.cs">
-      <DependentUpon>MenuAdhérent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\ModifierAdh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\ModifierAdh.Designer.cs">
-      <DependentUpon>ModifierAdh.cs</DependentUpon>
     </Compile>
     <Compile Include="View\ModifierEvent.cs">
       <SubType>Form</SubType>
@@ -198,12 +169,6 @@
     <EmbeddedResource Include="View\GérerEvents.resx">
       <DependentUpon>GérerEvents.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\MenuAdhérent.resx">
-      <DependentUpon>MenuAdhérent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\ModifierAdh.resx">
-      <DependentUpon>ModifierAdh.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\ModifierEvent.resx">
       <DependentUpon>ModifierEvent.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,7 +186,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\SupprimerAdherents.resx">
       <DependentUpon>SupprimerAdherents.cs</DependentUpon>
@@ -244,10 +208,17 @@
     <Analyzer Include="..\packages\xunit.analyzers.0.8.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MetroFramework.txt" />
-    <None Include="Resources\group.png" />
-    <None Include="Resources\l.png" />
-    <None Include="Resources\user.png" />
+    <Content Include="docs\MySqlCommand.xml" />
+    <Content Include="docs\MySqlCommandBuilder.xml" />
+    <Content Include="docs\MySqlConnection.xml" />
+    <Content Include="docs\MySqlConnectionStringBuilder.xml" />
+    <Content Include="docs\MySqlDataAdapter.xml" />
+    <Content Include="docs\MySqlDataReader.xml" />
+    <Content Include="docs\MySqlException.xml" />
+    <Content Include="docs\MySqlHelper.xml" />
+    <Content Include="docs\MySqlParameter.xml" />
+    <Content Include="docs\MySqlParameterCollection.xml" />
+    <Content Include="docs\MySqlTransaction.xml" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

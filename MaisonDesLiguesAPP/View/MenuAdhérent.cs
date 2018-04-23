@@ -48,7 +48,8 @@ namespace MaisonDesLiguesAPP.View
 
         private void metroTileModifier_Click(object sender, EventArgs e)
         {
-
+            ModifierAdh modifier = new ModifierAdh();
+            modifier.ShowDialog();
         }
 
         private void metroTileAffecter_Click(object sender, EventArgs e)
@@ -67,7 +68,18 @@ namespace MaisonDesLiguesAPP.View
 
         private void metroTileSupprimer_Click(object sender, EventArgs e)
         {
-            SupprimerAdherents supprimer = new SupprimerAdherents();
+            SupprimerAdherents supprimer = new SupprimerAdherents(dataAdherent);
+            supprimer.ShowDialog();
+        }
+
+        private void metroTileSupprimer_MouseEnter(object sender, EventArgs e)
+        {
+            metroTileSupprimer.Style = MetroFramework.MetroColorStyle.Pink;
+        }
+
+        private void metroTileSupprimer_MouseLeave(object sender, EventArgs e)
+        {
+            metroTileSupprimer.Style = MetroFramework.MetroColorStyle.Red;
         }
     }
 }

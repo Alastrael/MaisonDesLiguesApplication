@@ -25,7 +25,7 @@ namespace MaisonDesLiguesAPP
             string uid = "root";
             string password = "";
             connexionParams = "SERVER=" + server + ";" + "PORT=" + port + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + "; persistsecurityinfo=True; SslMode=none;";
+            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
         }
         public void ajouterClub(Club club)
         {
@@ -170,28 +170,6 @@ namespace MaisonDesLiguesAPP
             }
             return liste;
         }
-        public List<TypeClub> listeTypeClub()
-        {
-            List<TypeClub> liste = new List<TypeClub>();
-            TypeClub type;
-            using (MySqlConnection connexion = new MySqlConnection(connexionParams))
-            {
-                connexion.Open();
-                string requete = "SELECT id_type_club, libelle " +
-                    "FROM type_club;";
-                MySqlCommand cmd = new MySqlCommand(requete, connexion);
-                using (MySqlDataReader datareader = cmd.ExecuteReader())
-                {
-                    while (datareader.Read())
-                    {
-                        type = new TypeClub((string)datareader["libelle"]);
-                        liste.Add(type);
-                        type.id_type_club = (int)datareader["id_type_club"];
-                    }
-                }
-            }
-            return liste;
-        }
 
         public List<Evenements> listeEvents(Club club)
         {
@@ -318,27 +296,6 @@ namespace MaisonDesLiguesAPP
                 cmd.Parameters.AddWithValue("@debut", even.debut);
                 cmd.Parameters.AddWithValue("@fin", even.fin);
                 cmd.Parameters.AddWithValue("@id", even.id);
-                cmd.ExecuteNonQuery();
-            }
-        }
-        public void modifierAdh(Adhérents adh)
-        {
-            using (MySqlConnection connexion = new MySqlConnection(connexionParams))
-            {
-                connexion.Open();
-                string requete = "UPDATE adherent " +
-                    "SET nom_adherent = @nom, " +
-                    "prenom_adherent = @prenom, " +
-                    "datenaissance_adherent = @date, adresse_adherent=@adresse, codepostal_adherent=@cp, ville_adherent=@ville " +
-                    "WHERE id_adherent = @id;";
-                MySqlCommand cmd = new MySqlCommand(requete, connexion);
-                cmd.Parameters.AddWithValue("@nom", adh.Nom);
-                cmd.Parameters.AddWithValue("@prenom", adh.Prenom);
-                cmd.Parameters.AddWithValue("@date", adh.Naissance);
-                cmd.Parameters.AddWithValue("@adresse", adh.Adresse);
-                cmd.Parameters.AddWithValue("@cp", adh.Codepostal);
-                cmd.Parameters.AddWithValue("@ville", adh.Ville);
-                cmd.Parameters.AddWithValue("@id", adh.Id);
                 cmd.ExecuteNonQuery();
             }
         }

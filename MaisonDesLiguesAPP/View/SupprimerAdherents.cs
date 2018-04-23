@@ -13,10 +13,12 @@ namespace MaisonDesLiguesAPP
     public partial class SupprimerAdherents : Form
     {
         Connection connexion = new Connection();
-        List<Adhérents> liste = new List<Adhérents>();
-        public SupprimerAdherents()
+        List<Adhérents> liste;
+        DataGridView data;
+        public SupprimerAdherents(DataGridView data)
         {
             InitializeComponent();
+            this.data = data;
         }
 
         private void buttonSuppression_Click(object sender, EventArgs e)
@@ -26,6 +28,14 @@ namespace MaisonDesLiguesAPP
             Adhérents ad = liste[positionA];
             connexion.supprimerAdherent(ad);
             refreshListBox();
+
+            data.DataSource = null;
+            data.Update();
+            data.Refresh();
+            data.DataSource = connexion.listeAdherents();
+            data.Columns[0].Visible = false;
+            data.Columns[3].HeaderText = "Date de Naissance";
+            data.Columns[5].HeaderText = "Code Postal";
         }
 
         private void refreshListBox()

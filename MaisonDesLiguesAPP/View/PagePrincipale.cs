@@ -59,8 +59,8 @@ namespace MaisonDesLiguesAPP
 
         private void supprimerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SupprimerAdherents suppression = new SupprimerAdherents();
-            suppression.ShowDialog();
+            
+            
         }
 
         private void ajouterClub_Click(object sender, EventArgs e)
