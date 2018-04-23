@@ -81,5 +81,15 @@ namespace MaisonDesLiguesAPP.View
         {
             metroTileSupprimer.Style = MetroFramework.MetroColorStyle.Red;
         }
+
+        private void metroTileModifier_MouseEnter(object sender, EventArgs e)
+        {
+            metroTileModifier.Style = MetroFramework.MetroColorStyle.Brown;
+        }
+
+        private void metroTileModifier_MouseLeave(object sender, EventArgs e)
+        {
+            metroTileModifier.Style = MetroFramework.MetroColorStyle.Orange;
+        }
     }
 }

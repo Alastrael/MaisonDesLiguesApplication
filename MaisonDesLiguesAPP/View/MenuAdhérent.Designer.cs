@@ -62,6 +62,8 @@
             this.metroTileModifier.Text = "Modifier";
             this.metroTileModifier.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTileModifier.Click += new System.EventHandler(this.metroTileModifier_Click);
+            this.metroTileModifier.MouseEnter += new System.EventHandler(this.metroTileModifier_MouseEnter);
+            this.metroTileModifier.MouseLeave += new System.EventHandler(this.metroTileModifier_MouseLeave);
             // 
             // metroTileAffecter
             // 
