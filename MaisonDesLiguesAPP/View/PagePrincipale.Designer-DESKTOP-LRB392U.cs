@@ -141,7 +141,6 @@
             this.metroTileClub.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTileClub.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTileClub.UseTileImage = true;
-            this.metroTileClub.Click += new System.EventHandler(this.metroTileClub_Click);
             // 
             // metroTileAdh
             // 

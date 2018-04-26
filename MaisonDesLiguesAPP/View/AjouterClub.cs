@@ -1,4 +1,5 @@
 ﻿using MaisonDesLiguesAPP.Business;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,17 +12,17 @@ using System.Windows.Forms;
 
 namespace MaisonDesLiguesAPP
 {
-    public partial class AjouterClub : MetroFramework.Forms.MetroForm
+    public partial class AjouterClub : MaterialForm
     {
-        ClubGerer club;
+        List<Club> club;
         DataGridView data;
         List<TypeClub> liste;
         Connection connexion = new Connection();
-        public AjouterClub(ClubGerer club/*, DataGridView data*/)
+        public AjouterClub(List<Club> liste, DataGridView data)
         {
             InitializeComponent();
-            this.club = club;
-            //this.data = data;
+            this.data = data;
+            this.club = liste;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -48,19 +49,19 @@ namespace MaisonDesLiguesAPP
             textBoxVilleClub.Text = "";
             textboxTel.Text = "";
             textBoxEmailClub.Text = "";
-            //data.DataSource = null;
-            //data.Update();
-            //data.Refresh();
-            //data.DataSource = connexion.listeClubs();
-            //data.Columns[0].Visible = false;
-            //data.Columns[8].Visible = false;
-            //data.Columns[1].HeaderText = "Nom du club";
-            //data.Columns[2].HeaderText = "Lien du site du club";
-            //data.Columns[3].HeaderText = "Adresse";
-            //data.Columns[4].HeaderText = "Code Postal";
-            //data.Columns[5].HeaderText = "Ville";
-            //data.Columns[6].HeaderText = "Téléphone";
-            //data.Columns[7].HeaderText = "Email";  
+            data.DataSource = null;
+            data.Update();
+            data.Refresh();
+            data.DataSource = connexion.listeClubs();
+            data.Columns[0].Visible = false;
+            data.Columns[8].Visible = false;
+            data.Columns[1].HeaderText = "Nom du club";
+            data.Columns[2].HeaderText = "Lien du site du club";
+            data.Columns[3].HeaderText = "Adresse";
+            data.Columns[4].HeaderText = "Code Postal";
+            data.Columns[5].HeaderText = "Ville";
+            data.Columns[6].HeaderText = "Téléphone";
+            data.Columns[7].HeaderText = "Email";
         }
 
         private void AjouterClub_Load(object sender, EventArgs e)
@@ -71,6 +72,11 @@ namespace MaisonDesLiguesAPP
             {
                 listBoxtype.Items.Add(item.libelle);
             }
+        }
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
