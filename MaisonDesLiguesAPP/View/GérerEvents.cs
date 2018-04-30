@@ -84,5 +84,11 @@ namespace MaisonDesLiguesAPP.View
             AffecterAdhEvent affect = new AffecterAdhEvent(listeClub[positionC],listeEvents[positionA]);
             affect.ShowDialog();
         }
+
+        private void btnCreer_Click(object sender, EventArgs e)
+        {
+            AjouterEvenement ajout = new AjouterEvenement();
+            ajout.ShowDialog();
+        }
     }
 }

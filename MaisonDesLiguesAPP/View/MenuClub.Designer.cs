@@ -62,12 +62,13 @@
             // metroDesaffecter
             // 
             this.metroDesaffecter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroDesaffecter.Location = new System.Drawing.Point(356, 87);
+            this.metroDesaffecter.Location = new System.Drawing.Point(567, 87);
             this.metroDesaffecter.Name = "metroDesaffecter";
             this.metroDesaffecter.Size = new System.Drawing.Size(156, 55);
             this.metroDesaffecter.Style = MetroFramework.MetroColorStyle.Red;
             this.metroDesaffecter.TabIndex = 2;
             this.metroDesaffecter.Text = "Désaffecter un adhérent";
+            this.metroDesaffecter.Click += new System.EventHandler(this.metroDesaffecter_Click);
             // 
             // dataClubs
             // 

@@ -59,5 +59,11 @@ namespace MaisonDesLiguesAPP
             GérerEvents events = new GérerEvents();
             events.ShowDialog();
         }
+
+        private void metroDesaffecter_Click(object sender, EventArgs e)
+        {
+            DessafecterAdh desafect = new DessafecterAdh();
+            desafect.ShowDialog();
+        }
     }
 }
