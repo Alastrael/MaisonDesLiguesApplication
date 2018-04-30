@@ -1,4 +1,5 @@
 ﻿using MaisonDesLiguesAPP.Business;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace MaisonDesLiguesAPP.View
 {
-    public partial class GérerEvents : Form
+    public partial class GérerEvents : MaterialForm
     {
         List<Club> listeClub;
         List<Evenements> listeEvents;
@@ -39,6 +40,11 @@ namespace MaisonDesLiguesAPP.View
             {
                 listBoxEvents.Items.Add(item.titre);
             }
+            listBoxEvents.Enabled = true;
+            btnModifier.Enabled = true;
+            button2.Enabled = true;
+            button1.Enabled = true;
+
         }
 
         private void button1_Click(object sender, EventArgs e)

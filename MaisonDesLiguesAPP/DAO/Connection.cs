@@ -342,5 +342,29 @@ namespace MaisonDesLiguesAPP
                 cmd.ExecuteNonQuery();
             }
         }
+        public void modifierClub(Club club)
+        {
+            using (MySqlConnection connexion = new MySqlConnection(connexionParams))
+            {
+                connexion.Open();
+                string requete = "UPDATE club " +
+                    "SET titre_club = @titre, " +
+                    "url_club = @url, " +
+                    "adresse_club = @adresse, codepostal_club=@cp, ville_club=@ville, " +
+                    "mail_club=@mail, telephone_club=@tel, id_type_club=@idt " +
+                    "WHERE id_club = @id;";
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                cmd.Parameters.AddWithValue("@id", club.id);
+                cmd.Parameters.AddWithValue("@titre", club.nom);
+                cmd.Parameters.AddWithValue("@url", club.lien);
+                cmd.Parameters.AddWithValue("@adresse", club.adresse);
+                cmd.Parameters.AddWithValue("@cp", club.codepostal);
+                cmd.Parameters.AddWithValue("@ville", club.ville);
+                cmd.Parameters.AddWithValue("@mail", club.email);
+                cmd.Parameters.AddWithValue("@tel", club.telephone);
+                cmd.Parameters.AddWithValue("@idt", club.idClub);
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }

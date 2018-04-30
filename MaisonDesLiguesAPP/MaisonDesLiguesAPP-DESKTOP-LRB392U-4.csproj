@@ -91,10 +91,10 @@
     <Compile Include="Business\Adhérents.cs" />
     <Compile Include="Business\Evenements.cs" />
     <Compile Include="Business\TypeClub.cs" />
-    <Compile Include="View\MenuClub.cs">
+    <Compile Include="MenuClub.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\MenuClub.Designer.cs">
+    <Compile Include="MenuClub.Designer.cs">
       <DependentUpon>MenuClub.cs</DependentUpon>
     </Compile>
     <Compile Include="View\AffecterAdherent.cs">
@@ -156,12 +156,6 @@
     <Compile Include="View\ModifierAdh.Designer.cs">
       <DependentUpon>ModifierAdh.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ModifierClub.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\ModifierClub.Designer.cs">
-      <DependentUpon>ModifierClub.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\ModifierEvent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,7 +183,7 @@
     <Compile Include="View\SupprimerAdherents.Designer.cs">
       <DependentUpon>SupprimerAdherents.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\MenuClub.resx">
+    <EmbeddedResource Include="MenuClub.resx">
       <DependentUpon>MenuClub.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AffecterAdherent.resx">
@@ -219,9 +213,6 @@
     <EmbeddedResource Include="View\ModifierAdh.resx">
       <DependentUpon>ModifierAdh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ModifierClub.resx">
-      <DependentUpon>ModifierClub.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\ModifierEvent.resx">
       <DependentUpon>ModifierEvent.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,7 +235,6 @@
     <EmbeddedResource Include="View\SupprimerAdherents.resx">
       <DependentUpon>SupprimerAdherents.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Diagramme.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
