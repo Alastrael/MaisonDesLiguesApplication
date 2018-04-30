@@ -91,10 +91,10 @@
     <Compile Include="Business\Adhérents.cs" />
     <Compile Include="Business\Evenements.cs" />
     <Compile Include="Business\TypeClub.cs" />
-    <Compile Include="MenuClub.cs">
+    <Compile Include="View\MenuClub.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuClub.Designer.cs">
+    <Compile Include="View\MenuClub.Designer.cs">
       <DependentUpon>MenuClub.cs</DependentUpon>
     </Compile>
     <Compile Include="View\AffecterAdherent.cs">
@@ -183,7 +183,7 @@
     <Compile Include="View\SupprimerAdherents.Designer.cs">
       <DependentUpon>SupprimerAdherents.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="MenuClub.resx">
+    <EmbeddedResource Include="View\MenuClub.resx">
       <DependentUpon>MenuClub.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AffecterAdherent.resx">
@@ -235,6 +235,7 @@
     <EmbeddedResource Include="View\SupprimerAdherents.resx">
       <DependentUpon>SupprimerAdherents.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Diagramme.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -165,6 +165,7 @@ namespace MaisonDesLiguesAPP
             this.materialFlatValider.TabIndex = 13;
             this.materialFlatValider.Text = "Valider";
             this.materialFlatValider.UseVisualStyleBackColor = true;
+            this.materialFlatValider.Click += new System.EventHandler(this.buttonAjouter_Click);
             // 
             // materialLabel1
             // 

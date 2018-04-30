@@ -112,6 +112,7 @@
             this.metroTile1.TabIndex = 5;
             this.metroTile1.Text = "Afficher les informations d\'un salarié";
             this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.metroTile1.Click += new System.EventHandler(this.metroTileCreer_Click);
             // 
             // MenuAdhérent
             // 

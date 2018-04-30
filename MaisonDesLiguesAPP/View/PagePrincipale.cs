@@ -14,13 +14,13 @@ namespace MaisonDesLiguesAPP
     public partial class PagePrincipale : MetroFramework.Forms.MetroForm
     {
         List<Adhérents>liste;
-        ClubGerer listeClub;
+        List<Club> listeClub;
         Connection connexion = new Connection();
         public PagePrincipale()
         {
             InitializeComponent();
             this.liste = new List<Adhérents>();
-            this.listeClub = new ClubGerer();
+            this.listeClub = new List<Club>();
         }
 
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -65,8 +65,8 @@ namespace MaisonDesLiguesAPP
 
         private void ajouterClub_Click(object sender, EventArgs e)
         {
-            AjouterClub ajoutClub = new AjouterClub(listeClub/*,dataClubs*/);
-            ajoutClub.ShowDialog();
+            /*AjouterClub ajoutClub = new AjouterClub(listeClub/*,dataClubs*///);
+            //ajoutClub.ShowDialog();
         }
 
         private void affecterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -101,6 +101,12 @@ namespace MaisonDesLiguesAPP
         {
             MenuAdhérent menuAdhérent = new MenuAdhérent(liste);
             menuAdhérent.ShowDialog();
+        }
+
+        private void metroTileClub_Click(object sender, EventArgs e)
+        {
+            MenuClub menuclub = new MenuClub(listeClub);
+            menuclub.ShowDialog();
         }
     }
 }
