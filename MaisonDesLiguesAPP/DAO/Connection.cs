@@ -55,8 +55,8 @@ namespace MaisonDesLiguesAPP
                 connexion.Open();
                 string requete = "INSERT INTO adherent (id_adherent, numero_licence, nom_adherent, " +
                     "prenom_adherent, datenaissance_adherent, adresse_adherent, codepostal_adherent, " +
-                    "ville_adherent, cotisation_adherent, id_club) VALUES (NULL, NULL, " +
-                    "@nom, @prenom, @date, @adresse, @codepostal, @ville, NULL, NULL);";
+                    "ville_adherent, cotisation_adherent, id_club, id_evenement) VALUES (NULL, NULL, " +
+                    "@nom, @prenom, @date, @adresse, @codepostal, @ville, NULL, NULL, NULL);";
                 MySqlCommand cmd = new MySqlCommand(requete, connexion);
                 cmd.Parameters.AddWithValue("@nom", adhérents.Nom);
                 cmd.Parameters.AddWithValue("@prenom", adhérents.Prenom);
@@ -292,14 +292,14 @@ namespace MaisonDesLiguesAPP
         {
             using (MySqlConnection connexion = new MySqlConnection(connexionParams))
             {
-                /*connexion.Open();
+                connexion.Open();
                 string requete = "UPDATE adherent " +
-                    "SET id_club = @idClub " +
+                    "SET id_evenement = @idE " +
                     "WHERE id_adherent = @idAdherent;";
                 MySqlCommand cmd = new MySqlCommand(requete, connexion);
-                cmd.Parameters.AddWithValue("@idClub", club.id);
-                cmd.Parameters.AddWithValue("@idAdherent", adhérents.Id);
-                cmd.ExecuteNonQuery();*/
+                cmd.Parameters.AddWithValue("@idE", even.id);
+                cmd.Parameters.AddWithValue("@idAdherent", adh.Id);
+                cmd.ExecuteNonQuery();
             }
         }
 
@@ -363,6 +363,21 @@ namespace MaisonDesLiguesAPP
                 cmd.Parameters.AddWithValue("@mail", club.email);
                 cmd.Parameters.AddWithValue("@tel", club.telephone);
                 cmd.Parameters.AddWithValue("@idt", club.idClub);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void desaffectation(Adhérents adhérents)
+        {
+            using (MySqlConnection connexion = new MySqlConnection(connexionParams))
+            {
+                connexion.Open();
+                string requete = "UPDATE adherent " +
+                    "SET id_club = @idClub " +
+                    "WHERE id_adherent = @idAdherent;";
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                cmd.Parameters.AddWithValue("@idClub", null);
+                cmd.Parameters.AddWithValue("@idAdherent", adhérents.Id);
                 cmd.ExecuteNonQuery();
             }
         }

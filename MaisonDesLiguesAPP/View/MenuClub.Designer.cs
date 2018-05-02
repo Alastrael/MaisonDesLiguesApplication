@@ -38,6 +38,7 @@
             // 
             // metroCreer
             // 
+            this.metroCreer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroCreer.Location = new System.Drawing.Point(23, 87);
             this.metroCreer.Name = "metroCreer";
             this.metroCreer.Size = new System.Drawing.Size(105, 55);
@@ -45,24 +46,29 @@
             this.metroCreer.TabIndex = 0;
             this.metroCreer.Text = "Créer un club";
             this.metroCreer.Click += new System.EventHandler(this.metroCreer_Click);
+            this.metroCreer.MouseEnter += new System.EventHandler(this.metroCreer_MouseEnter);
             // 
             // metroMod
             // 
-            this.metroMod.Location = new System.Drawing.Point(281, 87);
+            this.metroMod.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroMod.Location = new System.Drawing.Point(182, 87);
             this.metroMod.Name = "metroMod";
             this.metroMod.Size = new System.Drawing.Size(126, 55);
             this.metroMod.Style = MetroFramework.MetroColorStyle.Purple;
             this.metroMod.TabIndex = 1;
             this.metroMod.Text = "Modifier un club";
+            this.metroMod.Click += new System.EventHandler(this.metroMod_Click);
             // 
             // metroDesaffecter
             // 
+            this.metroDesaffecter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroDesaffecter.Location = new System.Drawing.Point(567, 87);
             this.metroDesaffecter.Name = "metroDesaffecter";
             this.metroDesaffecter.Size = new System.Drawing.Size(156, 55);
             this.metroDesaffecter.Style = MetroFramework.MetroColorStyle.Red;
             this.metroDesaffecter.TabIndex = 2;
             this.metroDesaffecter.Text = "Désaffecter un adhérent";
+            this.metroDesaffecter.Click += new System.EventHandler(this.metroDesaffecter_Click);
             // 
             // dataClubs
             // 
@@ -75,12 +81,14 @@
             // 
             // metroMenuEvents
             // 
+            this.metroMenuEvents.Cursor = System.Windows.Forms.Cursors.Hand;
             this.metroMenuEvents.Location = new System.Drawing.Point(567, 368);
             this.metroMenuEvents.Name = "metroMenuEvents";
             this.metroMenuEvents.Size = new System.Drawing.Size(156, 38);
             this.metroMenuEvents.Style = MetroFramework.MetroColorStyle.Orange;
             this.metroMenuEvents.TabIndex = 4;
-            this.metroMenuEvents.Text = "Menu des évènements";
+            this.metroMenuEvents.Text = "Gérer les évènements";
+            this.metroMenuEvents.Click += new System.EventHandler(this.metroMenuEvents_Click);
             // 
             // MenuClub
             // 

@@ -91,6 +91,12 @@
     <Compile Include="Business\Adhérents.cs" />
     <Compile Include="Business\Evenements.cs" />
     <Compile Include="Business\TypeClub.cs" />
+    <Compile Include="View\DessafecterAdh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DessafecterAdh.Designer.cs">
+      <DependentUpon>DessafecterAdh.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MenuClub.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
     <Compile Include="View\SupprimerAdherents.Designer.cs">
       <DependentUpon>SupprimerAdherents.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\DessafecterAdh.resx">
+      <DependentUpon>DessafecterAdh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MenuClub.resx">
       <DependentUpon>MenuClub.cs</DependentUpon>
     </EmbeddedResource>

@@ -31,12 +31,14 @@ namespace MaisonDesLiguesAPP.View
             {
                 listBoxAdh.Items.Add(item.Nom + " " + item.Prenom);
             }
-            btnAffecter.Text = "Affecter au club : "+club.nom;
+            btnAffecter.Text = "Affecter à l'évènement : "+even.titre;
         }
 
         private void btnAffecter_Click(object sender, EventArgs e)
         {
-
+            int positionA = listBoxAdh.SelectedIndex;
+            Adhérents adh = liste[positionA];
+            connexion.affecterAdhToEvent(adh, even);
         }
     }
 }

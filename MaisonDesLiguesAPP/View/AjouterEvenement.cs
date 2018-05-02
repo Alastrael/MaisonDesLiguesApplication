@@ -1,4 +1,5 @@
 ﻿using MaisonDesLiguesAPP.Business;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace MaisonDesLiguesAPP.View
 {
-    public partial class AjouterEvenement : Form
+    public partial class AjouterEvenement : MaterialForm
     {
         Connection connexion = new Connection();
         List<Club> listeClub;
