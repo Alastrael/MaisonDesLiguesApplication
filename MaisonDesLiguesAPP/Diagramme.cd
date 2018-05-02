@@ -45,7 +45,7 @@
   <Class Name="MaisonDesLiguesAPP.Connection" Collapsed="true">
     <Position X="8" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAAEAAAQAAEAAQIgAAAAAghAAIAAQAABAAAIBAIABAA=</HashCode>
+      <HashCode>QAAEAAAQAIEAAQIgAAAAAghAAIAAQAABAAAIBAIABAA=</HashCode>
       <FileName>DAO\Connection.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -82,13 +82,6 @@
     <TypeIdentifier>
       <HashCode>BAAAAAEAUCDBAhCAAACAqAoSAAJAAAECAKAQgAAABAA=</HashCode>
       <FileName>View\AjouterClub.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="MaisonDesLiguesAPP.MenuClub" Collapsed="true">
-    <Position X="9.75" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAQCAAAAAAAEKAAAACAAAAABAAAAAAhAgABAA=</HashCode>
-      <FileName>View\MenuClub.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MaisonDesLiguesAPP.PagePrincipale" Collapsed="true">
@@ -155,7 +148,7 @@
   <Class Name="MaisonDesLiguesAPP.View.GérerEvents" Collapsed="true">
     <Position X="6.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CQEAEAAAQCAgAgAAAACAAAACEAAYAAwAAGAAhAAAAQA=</HashCode>
+      <HashCode>CQEAAAAAQCAgAgAAAACAAAACEAAYAAwAAGAAhAAAAQA=</HashCode>
       <FileName>View\GérerEvents.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -178,6 +171,12 @@
     <TypeIdentifier>
       <HashCode>AAAIAAIABCAAABAQAACAAAACAIAAAABAAAAAgAAAAQA=</HashCode>
       <FileName>View\ModifierEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MaisonDesLiguesAPP.MenuClub" Collapsed="true">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAECAAAACAAAAABAAAAAAAAgABAA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Interface Name="MaisonDesLiguesAPP.IAdhérents" Collapsed="true">
