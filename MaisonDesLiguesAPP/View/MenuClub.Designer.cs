@@ -33,6 +33,7 @@
             this.metroDesaffecter = new MetroFramework.Controls.MetroTile();
             this.dataClubs = new System.Windows.Forms.DataGridView();
             this.metroMenuEvents = new MetroFramework.Controls.MetroTile();
+            this.btnAffect = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.dataClubs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,11 +91,23 @@
             this.metroMenuEvents.Text = "Gérer les évènements";
             this.metroMenuEvents.Click += new System.EventHandler(this.metroMenuEvents_Click);
             // 
+            // btnAffect
+            // 
+            this.btnAffect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAffect.Location = new System.Drawing.Point(360, 87);
+            this.btnAffect.Name = "btnAffect";
+            this.btnAffect.Size = new System.Drawing.Size(143, 55);
+            this.btnAffect.Style = MetroFramework.MetroColorStyle.Purple;
+            this.btnAffect.TabIndex = 5;
+            this.btnAffect.Text = "Affecter un adhérent";
+            this.btnAffect.Click += new System.EventHandler(this.btnAffect_Click);
+            // 
             // MenuClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 418);
+            this.Controls.Add(this.btnAffect);
             this.Controls.Add(this.metroMenuEvents);
             this.Controls.Add(this.dataClubs);
             this.Controls.Add(this.metroDesaffecter);
@@ -116,5 +129,6 @@
         private MetroFramework.Controls.MetroTile metroDesaffecter;
         private System.Windows.Forms.DataGridView dataClubs;
         private MetroFramework.Controls.MetroTile metroMenuEvents;
+        private MetroFramework.Controls.MetroTile btnAffect;
     }
 }

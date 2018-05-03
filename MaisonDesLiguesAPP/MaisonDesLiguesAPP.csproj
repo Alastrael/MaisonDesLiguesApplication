@@ -54,6 +54,12 @@
     <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.11\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="PdfSharp, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -90,6 +96,7 @@
     <Compile Include="Business\AdherentsGerer.cs" />
     <Compile Include="Business\Adhérents.cs" />
     <Compile Include="Business\Evenements.cs" />
+    <Compile Include="Business\Infos.cs" />
     <Compile Include="Business\TypeClub.cs" />
     <Compile Include="View\DessafecterAdh.cs">
       <SubType>Form</SubType>
@@ -253,7 +260,6 @@
     <EmbeddedResource Include="View\SupprimerAdherents.resx">
       <DependentUpon>SupprimerAdherents.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Diagramme.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

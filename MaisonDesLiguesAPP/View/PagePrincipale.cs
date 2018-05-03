@@ -99,6 +99,7 @@ namespace MaisonDesLiguesAPP
 
         private void metroTileAdh_Click(object sender, EventArgs e)
         {
+            liste = connexion.listeAdherents();
             MenuAdhérent menuAdhérent = new MenuAdhérent(liste);
             menuAdhérent.ShowDialog();
         }

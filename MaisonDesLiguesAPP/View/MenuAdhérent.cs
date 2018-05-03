@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaisonDesLiguesAPP.Business;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,8 +33,8 @@ namespace MaisonDesLiguesAPP.View
 
         private void metroTileCreer_Click(object sender, EventArgs e)
         {
-            AjouterAdherents ajouter = new AjouterAdherents(liste, dataAdherent);
-            ajouter.ShowDialog();
+            Infos info = new Infos();
+            info.adhInfos(liste[0]);
         }
 
         private void metroTileCreer_MouseEnter(object sender, EventArgs e)

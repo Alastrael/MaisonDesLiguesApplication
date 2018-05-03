@@ -65,5 +65,11 @@ namespace MaisonDesLiguesAPP
             DessafecterAdh desafect = new DessafecterAdh();
             desafect.ShowDialog();
         }
+
+        private void btnAffect_Click(object sender, EventArgs e)
+        {
+            AffecterAdherent affecter = new AffecterAdherent();
+            affecter.ShowDialog();
+        }
     }
 }
