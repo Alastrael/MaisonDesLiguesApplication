@@ -15,6 +15,9 @@ namespace MaisonDesLiguesAPP
         public string Adresse { get; set; }
         public string Codepostal { get; set; }
         public string Ville { get; set; }
+        public double cotisation { get; set; }
+        public string licence { get; set; }
+        public int idClub { get; set; }
         public Adhérents(string nom, string prenom, DateTime date, string adresse,
             string codepostal, string ville)
         {

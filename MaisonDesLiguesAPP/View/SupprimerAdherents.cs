@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace MaisonDesLiguesAPP
 {
-    public partial class SupprimerAdherents : Form
+    public partial class SupprimerAdherents : MaterialForm
     {
         Connection connexion = new Connection();
         List<Adhérents> liste;
@@ -58,6 +59,11 @@ namespace MaisonDesLiguesAPP
             {
                 listBoxSupprimerAdh.Items.Add(item.Nom+" "+item.Prenom);
             }
+        }
+
+        private void retour_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

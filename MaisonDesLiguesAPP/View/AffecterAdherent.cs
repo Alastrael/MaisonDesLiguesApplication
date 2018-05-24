@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace MaisonDesLiguesAPP
 {
-    public partial class AffecterAdherent : Form
+    public partial class AffecterAdherent : MaterialForm
     {
         Connection connexion = new Connection();
         List<Adhérents> listeAdherent;
@@ -43,7 +44,8 @@ namespace MaisonDesLiguesAPP
 
             int positionC = listBoxClubs.SelectedIndex;
             Club club = listeClub[positionC];
-            connexion.affectation(ad, club);
+            connexion.affectation(ad, club, Convert.ToDouble(textBoxCotisation.Text));
+            ad.idClub = club.id;
 
             listBoxAdherents.DataSource = null;
             listBoxAdherents.Items.Clear();
@@ -52,6 +54,11 @@ namespace MaisonDesLiguesAPP
             {
                 listBoxAdherents.Items.Add(item.Nom + " " + item.Prenom);
             }
+        }
+
+        private void retour_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

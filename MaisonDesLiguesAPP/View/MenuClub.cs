@@ -71,5 +71,11 @@ namespace MaisonDesLiguesAPP
             AffecterAdherent affecter = new AffecterAdherent();
             affecter.ShowDialog();
         }
+
+        private void metroStats_Click(object sender, EventArgs e)
+        {
+            Statistiques stat = new Statistiques();
+            stat.ShowDialog();
+        }
     }
 }

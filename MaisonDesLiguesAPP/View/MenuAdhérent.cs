@@ -33,8 +33,8 @@ namespace MaisonDesLiguesAPP.View
 
         private void metroTileCreer_Click(object sender, EventArgs e)
         {
-            Infos info = new Infos();
-            info.adhInfos(liste[0]);
+            AjouterAdherents add = new AjouterAdherents(liste, dataAdherent);
+            add.ShowDialog();
         }
 
         private void metroTileCreer_MouseEnter(object sender, EventArgs e)
@@ -91,6 +91,17 @@ namespace MaisonDesLiguesAPP.View
         private void metroTileModifier_MouseLeave(object sender, EventArgs e)
         {
             metroTileModifier.Style = MetroFramework.MetroColorStyle.Orange;
+        }
+
+        private void infos_Click(object sender, EventArgs e)
+        {
+            AfficherInfos afficher = new AfficherInfos();
+            afficher.ShowDialog();
+        }
+
+        private void retour_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using MaisonDesLiguesAPP.Business;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace MaisonDesLiguesAPP.View
 {
-    public partial class ModifierEvent : Form
+    public partial class ModifierEvent : MaterialForm
     {
         Evenements even;
         Connection connexion = new Connection();
@@ -53,6 +54,11 @@ namespace MaisonDesLiguesAPP.View
                     even.titre, "Modification Success", MessageBoxButtons.OK);
                 this.Close();
             }
+        }
+
+        private void retour_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

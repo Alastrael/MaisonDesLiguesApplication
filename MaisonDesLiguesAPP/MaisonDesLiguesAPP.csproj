@@ -98,6 +98,12 @@
     <Compile Include="Business\Evenements.cs" />
     <Compile Include="Business\Infos.cs" />
     <Compile Include="Business\TypeClub.cs" />
+    <Compile Include="View\AfficherInfos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AfficherInfos.Designer.cs">
+      <DependentUpon>AfficherInfos.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\DessafecterAdh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,12 +202,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Statistiques.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Statistiques.Designer.cs">
+      <DependentUpon>Statistiques.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\SupprimerAdherents.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\SupprimerAdherents.Designer.cs">
       <DependentUpon>SupprimerAdherents.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\AfficherInfos.resx">
+      <DependentUpon>AfficherInfos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\DessafecterAdh.resx">
       <DependentUpon>DessafecterAdh.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,6 +272,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\Statistiques.resx">
+      <DependentUpon>Statistiques.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\SupprimerAdherents.resx">
       <DependentUpon>SupprimerAdherents.cs</DependentUpon>
     </EmbeddedResource>

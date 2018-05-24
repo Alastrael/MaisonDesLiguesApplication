@@ -90,5 +90,10 @@ namespace MaisonDesLiguesAPP.View
             AjouterEvenement ajout = new AjouterEvenement();
             ajout.ShowDialog();
         }
+
+        private void retour_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -35,12 +35,13 @@
             this.button2 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.button1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnCreer = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.retour = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
             // listBoxClubs
             // 
             this.listBoxClubs.FormattingEnabled = true;
-            this.listBoxClubs.Location = new System.Drawing.Point(98, 132);
+            this.listBoxClubs.Location = new System.Drawing.Point(98, 199);
             this.listBoxClubs.Name = "listBoxClubs";
             this.listBoxClubs.Size = new System.Drawing.Size(200, 108);
             this.listBoxClubs.TabIndex = 1;
@@ -49,7 +50,7 @@
             // 
             this.listBoxEvents.Enabled = false;
             this.listBoxEvents.FormattingEnabled = true;
-            this.listBoxEvents.Location = new System.Drawing.Point(98, 310);
+            this.listBoxEvents.Location = new System.Drawing.Point(98, 374);
             this.listBoxEvents.Name = "listBoxEvents";
             this.listBoxEvents.Size = new System.Drawing.Size(200, 108);
             this.listBoxEvents.TabIndex = 3;
@@ -60,7 +61,7 @@
             this.btnValider.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnValider.Depth = 0;
             this.btnValider.Icon = null;
-            this.btnValider.Location = new System.Drawing.Point(162, 257);
+            this.btnValider.Location = new System.Drawing.Point(158, 313);
             this.btnValider.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnValider.Name = "btnValider";
             this.btnValider.Primary = true;
@@ -77,7 +78,7 @@
             this.btnModifier.Depth = 0;
             this.btnModifier.Enabled = false;
             this.btnModifier.Icon = null;
-            this.btnModifier.Location = new System.Drawing.Point(12, 424);
+            this.btnModifier.Location = new System.Drawing.Point(12, 488);
             this.btnModifier.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Primary = true;
@@ -94,7 +95,7 @@
             this.button2.Depth = 0;
             this.button2.Enabled = false;
             this.button2.Icon = null;
-            this.button2.Location = new System.Drawing.Point(203, 424);
+            this.button2.Location = new System.Drawing.Point(204, 488);
             this.button2.MouseState = MaterialSkin.MouseState.HOVER;
             this.button2.Name = "button2";
             this.button2.Primary = true;
@@ -111,7 +112,7 @@
             this.button1.Depth = 0;
             this.button1.Enabled = false;
             this.button1.Icon = null;
-            this.button1.Location = new System.Drawing.Point(57, 466);
+            this.button1.Location = new System.Drawing.Point(56, 530);
             this.button1.MouseState = MaterialSkin.MouseState.HOVER;
             this.button1.Name = "button1";
             this.button1.Primary = true;
@@ -127,7 +128,7 @@
             this.btnCreer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnCreer.Depth = 0;
             this.btnCreer.Icon = null;
-            this.btnCreer.Location = new System.Drawing.Point(115, 81);
+            this.btnCreer.Location = new System.Drawing.Point(226, 75);
             this.btnCreer.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCreer.Name = "btnCreer";
             this.btnCreer.Primary = true;
@@ -137,11 +138,24 @@
             this.btnCreer.UseVisualStyleBackColor = true;
             this.btnCreer.Click += new System.EventHandler(this.btnCreer_Click);
             // 
+            // retour
+            // 
+            this.retour.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.retour.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.retour.Location = new System.Drawing.Point(12, 75);
+            this.retour.Name = "retour";
+            this.retour.Size = new System.Drawing.Size(67, 36);
+            this.retour.Style = MetroFramework.MetroColorStyle.Silver;
+            this.retour.TabIndex = 13;
+            this.retour.Text = "Retour";
+            this.retour.Click += new System.EventHandler(this.retour_Click);
+            // 
             // GérerEvents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 514);
+            this.ClientSize = new System.Drawing.Size(406, 578);
+            this.Controls.Add(this.retour);
             this.Controls.Add(this.btnCreer);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
@@ -166,5 +180,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton button2;
         private MaterialSkin.Controls.MaterialRaisedButton button1;
         private MaterialSkin.Controls.MaterialRaisedButton btnCreer;
+        private MetroFramework.Controls.MetroTile retour;
     }
 }

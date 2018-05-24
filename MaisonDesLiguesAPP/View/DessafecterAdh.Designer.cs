@@ -32,12 +32,13 @@
             this.btnClub = new MaterialSkin.Controls.MaterialFlatButton();
             this.listBoxAdh = new System.Windows.Forms.ListBox();
             this.btnAdh = new MaterialSkin.Controls.MaterialFlatButton();
+            this.retour = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
             // listBoxClub
             // 
             this.listBoxClub.FormattingEnabled = true;
-            this.listBoxClub.Location = new System.Drawing.Point(78, 71);
+            this.listBoxClub.Location = new System.Drawing.Point(78, 101);
             this.listBoxClub.Name = "listBoxClub";
             this.listBoxClub.Size = new System.Drawing.Size(214, 160);
             this.listBoxClub.TabIndex = 14;
@@ -48,7 +49,7 @@
             this.btnClub.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnClub.Depth = 0;
             this.btnClub.Icon = null;
-            this.btnClub.Location = new System.Drawing.Point(119, 240);
+            this.btnClub.Location = new System.Drawing.Point(118, 270);
             this.btnClub.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnClub.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnClub.Name = "btnClub";
@@ -63,7 +64,7 @@
             // 
             this.listBoxAdh.Enabled = false;
             this.listBoxAdh.FormattingEnabled = true;
-            this.listBoxAdh.Location = new System.Drawing.Point(78, 285);
+            this.listBoxAdh.Location = new System.Drawing.Point(78, 330);
             this.listBoxAdh.Name = "listBoxAdh";
             this.listBoxAdh.Size = new System.Drawing.Size(214, 160);
             this.listBoxAdh.TabIndex = 16;
@@ -76,7 +77,7 @@
             this.btnAdh.Depth = 0;
             this.btnAdh.Enabled = false;
             this.btnAdh.Icon = null;
-            this.btnAdh.Location = new System.Drawing.Point(78, 454);
+            this.btnAdh.Location = new System.Drawing.Point(78, 499);
             this.btnAdh.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnAdh.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnAdh.Name = "btnAdh";
@@ -87,11 +88,24 @@
             this.btnAdh.UseVisualStyleBackColor = true;
             this.btnAdh.Click += new System.EventHandler(this.btnAdh_Click);
             // 
+            // retour
+            // 
+            this.retour.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.retour.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.retour.Location = new System.Drawing.Point(12, 70);
+            this.retour.Name = "retour";
+            this.retour.Size = new System.Drawing.Size(63, 28);
+            this.retour.Style = MetroFramework.MetroColorStyle.Silver;
+            this.retour.TabIndex = 18;
+            this.retour.Text = "Retour";
+            this.retour.Click += new System.EventHandler(this.retour_Click);
+            // 
             // DessafecterAdh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 523);
+            this.ClientSize = new System.Drawing.Size(380, 550);
+            this.Controls.Add(this.retour);
             this.Controls.Add(this.btnAdh);
             this.Controls.Add(this.listBoxAdh);
             this.Controls.Add(this.btnClub);
@@ -110,5 +124,6 @@
         private MaterialSkin.Controls.MaterialFlatButton btnClub;
         private System.Windows.Forms.ListBox listBoxAdh;
         private MaterialSkin.Controls.MaterialFlatButton btnAdh;
+        private MetroFramework.Controls.MetroTile retour;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace MaisonDesLiguesAPP
 {
-    public partial class AffichageAdherents : Form
+    public partial class AffichageAdherents : MaterialForm
     {
         Connection connexion = new Connection();
         List<Adhérents> adh;
@@ -26,6 +27,11 @@ namespace MaisonDesLiguesAPP
             {
                 listBoxadh.Items.Add(item.Nom + " " + item.Prenom);
             }
+        }
+
+        private void retour_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

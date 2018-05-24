@@ -12,34 +12,29 @@ using System.Windows.Forms;
 
 namespace MaisonDesLiguesAPP.View
 {
-    public partial class AffecterAdhEvent : MaterialForm
+    public partial class AfficherInfos : MaterialForm
     {
-        Club club;
-        Evenements even;
-        List<Adhérents> liste;
         Connection connexion = new Connection();
-        public AffecterAdhEvent(Club club, Evenements even)
+        List<Adhérents> liste;
+        Infos infos = new Infos();
+        public AfficherInfos()
         {
             InitializeComponent();
-            this.even = even;
-            this.club = club;
         }
 
-        private void AffecterAdhEvent_Load(object sender, EventArgs e)
+        private void AfficherInfos_Load(object sender, EventArgs e)
         {
-            liste = connexion.listeAdherentsInClub(club);
+            liste = connexion.listeAdherents();
             foreach (var item in liste)
             {
                 listBoxAdh.Items.Add(item.Nom + " " + item.Prenom);
             }
-            btnAffecter.Text = "Affecter à l'évènement : "+even.titre;
         }
 
-        private void btnAffecter_Click(object sender, EventArgs e)
+        private void btnChoisir_Click(object sender, EventArgs e)
         {
-            int positionA = listBoxAdh.SelectedIndex;
-            Adhérents adh = liste[positionA];
-            connexion.affecterAdhToEvent(adh, even);
+            int position = listBoxAdh.SelectedIndex;
+            infos.adhInfos(liste[position]);
         }
 
         private void retour_Click(object sender, EventArgs e)

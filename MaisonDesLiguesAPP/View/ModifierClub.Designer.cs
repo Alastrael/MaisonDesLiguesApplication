@@ -47,12 +47,13 @@
             this.textBoxVilleClub = new System.Windows.Forms.TextBox();
             this.textboxTel = new System.Windows.Forms.MaskedTextBox();
             this.textBoxEmailClub = new System.Windows.Forms.TextBox();
+            this.retour = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 75);
+            this.listBox1.Location = new System.Drawing.Point(12, 123);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(214, 160);
             this.listBox1.TabIndex = 14;
@@ -63,7 +64,7 @@
             this.btnChoisir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnChoisir.Depth = 0;
             this.btnChoisir.Icon = null;
-            this.btnChoisir.Location = new System.Drawing.Point(251, 144);
+            this.btnChoisir.Location = new System.Drawing.Point(255, 183);
             this.btnChoisir.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnChoisir.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnChoisir.Name = "btnChoisir";
@@ -80,7 +81,7 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(7, 272);
+            this.materialLabel1.Location = new System.Drawing.Point(8, 323);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(42, 19);
@@ -93,7 +94,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(7, 308);
+            this.materialLabel2.Location = new System.Drawing.Point(7, 359);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(37, 19);
@@ -106,7 +107,7 @@
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(7, 339);
+            this.materialLabel3.Location = new System.Drawing.Point(7, 397);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(64, 19);
@@ -119,7 +120,7 @@
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(7, 372);
+            this.materialLabel4.Location = new System.Drawing.Point(7, 430);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(95, 19);
@@ -132,7 +133,7 @@
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(170, 372);
+            this.materialLabel5.Location = new System.Drawing.Point(169, 428);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
             this.materialLabel5.Size = new System.Drawing.Size(39, 19);
@@ -145,7 +146,7 @@
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel6.Location = new System.Drawing.Point(7, 406);
+            this.materialLabel6.Location = new System.Drawing.Point(7, 461);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
             this.materialLabel6.Size = new System.Drawing.Size(79, 19);
@@ -158,7 +159,7 @@
             this.materialLabel7.Depth = 0;
             this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel7.Location = new System.Drawing.Point(7, 441);
+            this.materialLabel7.Location = new System.Drawing.Point(7, 496);
             this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel7.Name = "materialLabel7";
             this.materialLabel7.Size = new System.Drawing.Size(51, 19);
@@ -171,7 +172,7 @@
             this.materialLabel8.Depth = 0;
             this.materialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel8.Location = new System.Drawing.Point(7, 481);
+            this.materialLabel8.Location = new System.Drawing.Point(7, 533);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
             this.materialLabel8.Size = new System.Drawing.Size(93, 19);
@@ -183,7 +184,7 @@
             // 
             this.listBox2.Enabled = false;
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(106, 481);
+            this.listBox2.Location = new System.Drawing.Point(143, 533);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(211, 56);
             this.listBox2.TabIndex = 24;
@@ -196,7 +197,7 @@
             this.btnModifier.Depth = 0;
             this.btnModifier.Enabled = false;
             this.btnModifier.Icon = null;
-            this.btnModifier.Location = new System.Drawing.Point(153, 546);
+            this.btnModifier.Location = new System.Drawing.Point(205, 598);
             this.btnModifier.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnModifier.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnModifier.Name = "btnModifier";
@@ -211,7 +212,7 @@
             // 
             this.textBoxNomClub.BackColor = System.Drawing.Color.LightGray;
             this.textBoxNomClub.Enabled = false;
-            this.textBoxNomClub.Location = new System.Drawing.Point(55, 271);
+            this.textBoxNomClub.Location = new System.Drawing.Point(61, 322);
             this.textBoxNomClub.Name = "textBoxNomClub";
             this.textBoxNomClub.Size = new System.Drawing.Size(312, 20);
             this.textBoxNomClub.TabIndex = 26;
@@ -220,7 +221,7 @@
             // 
             this.textBoxLienClub.BackColor = System.Drawing.Color.LightGray;
             this.textBoxLienClub.Enabled = false;
-            this.textBoxLienClub.Location = new System.Drawing.Point(55, 308);
+            this.textBoxLienClub.Location = new System.Drawing.Point(61, 358);
             this.textBoxLienClub.Name = "textBoxLienClub";
             this.textBoxLienClub.Size = new System.Drawing.Size(312, 20);
             this.textBoxLienClub.TabIndex = 27;
@@ -229,7 +230,7 @@
             // 
             this.textBoxAdresseClub.BackColor = System.Drawing.Color.LightGray;
             this.textBoxAdresseClub.Enabled = false;
-            this.textBoxAdresseClub.Location = new System.Drawing.Point(77, 340);
+            this.textBoxAdresseClub.Location = new System.Drawing.Point(77, 396);
             this.textBoxAdresseClub.Name = "textBoxAdresseClub";
             this.textBoxAdresseClub.Size = new System.Drawing.Size(296, 20);
             this.textBoxAdresseClub.TabIndex = 28;
@@ -238,7 +239,7 @@
             // 
             this.textBoxDepartementClub.BackColor = System.Drawing.Color.LightGray;
             this.textBoxDepartementClub.Enabled = false;
-            this.textBoxDepartementClub.Location = new System.Drawing.Point(114, 371);
+            this.textBoxDepartementClub.Location = new System.Drawing.Point(108, 429);
             this.textBoxDepartementClub.Mask = "00000";
             this.textBoxDepartementClub.Name = "textBoxDepartementClub";
             this.textBoxDepartementClub.Size = new System.Drawing.Size(40, 20);
@@ -248,7 +249,7 @@
             // 
             this.textBoxVilleClub.BackColor = System.Drawing.Color.LightGray;
             this.textBoxVilleClub.Enabled = false;
-            this.textBoxVilleClub.Location = new System.Drawing.Point(215, 373);
+            this.textBoxVilleClub.Location = new System.Drawing.Point(212, 427);
             this.textBoxVilleClub.Name = "textBoxVilleClub";
             this.textBoxVilleClub.Size = new System.Drawing.Size(161, 20);
             this.textBoxVilleClub.TabIndex = 30;
@@ -257,7 +258,7 @@
             // 
             this.textboxTel.BackColor = System.Drawing.Color.LightGray;
             this.textboxTel.Enabled = false;
-            this.textboxTel.Location = new System.Drawing.Point(98, 406);
+            this.textboxTel.Location = new System.Drawing.Point(92, 462);
             this.textboxTel.Mask = "00 00 00 00 00";
             this.textboxTel.Name = "textboxTel";
             this.textboxTel.Size = new System.Drawing.Size(82, 20);
@@ -267,16 +268,29 @@
             // 
             this.textBoxEmailClub.BackColor = System.Drawing.Color.LightGray;
             this.textBoxEmailClub.Enabled = false;
-            this.textBoxEmailClub.Location = new System.Drawing.Point(70, 442);
+            this.textBoxEmailClub.Location = new System.Drawing.Point(77, 495);
             this.textBoxEmailClub.Name = "textBoxEmailClub";
             this.textBoxEmailClub.Size = new System.Drawing.Size(306, 20);
             this.textBoxEmailClub.TabIndex = 32;
+            // 
+            // retour
+            // 
+            this.retour.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.retour.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.retour.Location = new System.Drawing.Point(12, 78);
+            this.retour.Name = "retour";
+            this.retour.Size = new System.Drawing.Size(63, 28);
+            this.retour.Style = MetroFramework.MetroColorStyle.Silver;
+            this.retour.TabIndex = 33;
+            this.retour.Text = "Retour";
+            this.retour.Click += new System.EventHandler(this.retour_Click);
             // 
             // ModifierClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 597);
+            this.ClientSize = new System.Drawing.Size(393, 649);
+            this.Controls.Add(this.retour);
             this.Controls.Add(this.textBoxEmailClub);
             this.Controls.Add(this.textboxTel);
             this.Controls.Add(this.textBoxVilleClub);
@@ -325,5 +339,6 @@
         private System.Windows.Forms.TextBox textBoxVilleClub;
         private System.Windows.Forms.MaskedTextBox textboxTel;
         private System.Windows.Forms.TextBox textBoxEmailClub;
+        private MetroFramework.Controls.MetroTile retour;
     }
 }

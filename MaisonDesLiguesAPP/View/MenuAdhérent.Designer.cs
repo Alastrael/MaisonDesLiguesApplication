@@ -33,7 +33,8 @@
             this.metroTileAffecter = new MetroFramework.Controls.MetroTile();
             this.metroTileSupprimer = new MetroFramework.Controls.MetroTile();
             this.dataAdherent = new System.Windows.Forms.DataGridView();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.infos = new MetroFramework.Controls.MetroTile();
+            this.retour = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.dataAdherent)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,24 +103,37 @@
             this.dataAdherent.Size = new System.Drawing.Size(599, 205);
             this.dataAdherent.TabIndex = 4;
             // 
-            // metroTile1
+            // infos
             // 
-            this.metroTile1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroTile1.Location = new System.Drawing.Point(374, 394);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(248, 31);
-            this.metroTile1.Style = MetroFramework.MetroColorStyle.Teal;
-            this.metroTile1.TabIndex = 5;
-            this.metroTile1.Text = "Afficher les informations d\'un salarié";
-            this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
-            this.metroTile1.Click += new System.EventHandler(this.metroTileCreer_Click);
+            this.infos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.infos.Location = new System.Drawing.Point(374, 394);
+            this.infos.Name = "infos";
+            this.infos.Size = new System.Drawing.Size(248, 39);
+            this.infos.Style = MetroFramework.MetroColorStyle.Teal;
+            this.infos.TabIndex = 5;
+            this.infos.Text = "Afficher les informations d\'un salarié";
+            this.infos.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
+            this.infos.Click += new System.EventHandler(this.infos_Click);
+            // 
+            // retour
+            // 
+            this.retour.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.retour.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.retour.Location = new System.Drawing.Point(23, 397);
+            this.retour.Name = "retour";
+            this.retour.Size = new System.Drawing.Size(69, 36);
+            this.retour.Style = MetroFramework.MetroColorStyle.Silver;
+            this.retour.TabIndex = 11;
+            this.retour.Text = "Retour";
+            this.retour.Click += new System.EventHandler(this.retour_Click);
             // 
             // MenuAdhérent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(651, 444);
-            this.Controls.Add(this.metroTile1);
+            this.Controls.Add(this.retour);
+            this.Controls.Add(this.infos);
             this.Controls.Add(this.dataAdherent);
             this.Controls.Add(this.metroTileSupprimer);
             this.Controls.Add(this.metroTileAffecter);
@@ -141,6 +155,7 @@
         private MetroFramework.Controls.MetroTile metroTileAffecter;
         private MetroFramework.Controls.MetroTile metroTileSupprimer;
         private System.Windows.Forms.DataGridView dataAdherent;
-        private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroTile infos;
+        private MetroFramework.Controls.MetroTile retour;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSkin.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace MaisonDesLiguesAPP.View
 {
-    public partial class GérerAdhérentsClubs : Form
+    public partial class GérerAdhérentsClubs : MaterialForm
     {
         List<Club> listeClub;
         List<Adhérents> listeAdhérents;
@@ -39,6 +40,11 @@ namespace MaisonDesLiguesAPP.View
             {
                 listBoxAdh.Items.Add(item.Nom + " " + item.Prenom);
             }
+        }
+
+        private void retour_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

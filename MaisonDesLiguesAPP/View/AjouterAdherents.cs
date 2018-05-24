@@ -51,5 +51,10 @@ namespace MaisonDesLiguesAPP
             data.Columns[3].HeaderText = "Date de Naissance";
             data.Columns[5].HeaderText = "Code Postal";
         }
+
+        private void retour_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

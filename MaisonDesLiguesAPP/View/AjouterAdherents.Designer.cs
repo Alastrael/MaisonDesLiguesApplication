@@ -44,6 +44,7 @@ namespace MaisonDesLiguesAPP
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.textBoxCP = new System.Windows.Forms.MaskedTextBox();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.retour = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
             // labelNOM
@@ -52,7 +53,7 @@ namespace MaisonDesLiguesAPP
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelNOM.AutoSize = true;
-            this.labelNOM.Location = new System.Drawing.Point(12, 81);
+            this.labelNOM.Location = new System.Drawing.Point(47, 135);
             this.labelNOM.Name = "labelNOM";
             this.labelNOM.Size = new System.Drawing.Size(29, 13);
             this.labelNOM.TabIndex = 0;
@@ -64,7 +65,7 @@ namespace MaisonDesLiguesAPP
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPRENOM.AutoSize = true;
-            this.labelPRENOM.Location = new System.Drawing.Point(180, 84);
+            this.labelPRENOM.Location = new System.Drawing.Point(47, 161);
             this.labelPRENOM.Name = "labelPRENOM";
             this.labelPRENOM.Size = new System.Drawing.Size(43, 13);
             this.labelPRENOM.TabIndex = 1;
@@ -75,7 +76,7 @@ namespace MaisonDesLiguesAPP
             this.textBoxNOM.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxNOM.Location = new System.Drawing.Point(50, 81);
+            this.textBoxNOM.Location = new System.Drawing.Point(107, 132);
             this.textBoxNOM.MaximumSize = new System.Drawing.Size(200, 20);
             this.textBoxNOM.MinimumSize = new System.Drawing.Size(40, 20);
             this.textBoxNOM.Name = "textBoxNOM";
@@ -87,7 +88,7 @@ namespace MaisonDesLiguesAPP
             this.textBoxPRENOM.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPRENOM.Location = new System.Drawing.Point(262, 81);
+            this.textBoxPRENOM.Location = new System.Drawing.Point(107, 158);
             this.textBoxPRENOM.MaximumSize = new System.Drawing.Size(200, 20);
             this.textBoxPRENOM.MinimumSize = new System.Drawing.Size(40, 20);
             this.textBoxPRENOM.Name = "textBoxPRENOM";
@@ -96,7 +97,7 @@ namespace MaisonDesLiguesAPP
             // 
             // dateNaissance
             // 
-            this.dateNaissance.Location = new System.Drawing.Point(123, 131);
+            this.dateNaissance.Location = new System.Drawing.Point(107, 186);
             this.dateNaissance.Name = "dateNaissance";
             this.dateNaissance.Size = new System.Drawing.Size(200, 20);
             this.dateNaissance.TabIndex = 5;
@@ -107,7 +108,7 @@ namespace MaisonDesLiguesAPP
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDATE.AutoSize = true;
-            this.labelDATE.Location = new System.Drawing.Point(11, 131);
+            this.labelDATE.Location = new System.Drawing.Point(5, 188);
             this.labelDATE.Name = "labelDATE";
             this.labelDATE.Size = new System.Drawing.Size(96, 13);
             this.labelDATE.TabIndex = 6;
@@ -119,7 +120,7 @@ namespace MaisonDesLiguesAPP
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelAdresse.AutoSize = true;
-            this.labelAdresse.Location = new System.Drawing.Point(11, 171);
+            this.labelAdresse.Location = new System.Drawing.Point(56, 212);
             this.labelAdresse.Name = "labelAdresse";
             this.labelAdresse.Size = new System.Drawing.Size(45, 13);
             this.labelAdresse.TabIndex = 7;
@@ -130,7 +131,7 @@ namespace MaisonDesLiguesAPP
             this.textBoxAdresse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxAdresse.Location = new System.Drawing.Point(62, 168);
+            this.textBoxAdresse.Location = new System.Drawing.Point(107, 212);
             this.textBoxAdresse.MaximumSize = new System.Drawing.Size(200, 20);
             this.textBoxAdresse.MinimumSize = new System.Drawing.Size(40, 20);
             this.textBoxAdresse.Name = "textBoxAdresse";
@@ -142,7 +143,7 @@ namespace MaisonDesLiguesAPP
             this.textBoxVille.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxVille.Location = new System.Drawing.Point(107, 228);
+            this.textBoxVille.Location = new System.Drawing.Point(107, 264);
             this.textBoxVille.MaximumSize = new System.Drawing.Size(200, 20);
             this.textBoxVille.MinimumSize = new System.Drawing.Size(40, 20);
             this.textBoxVille.Name = "textBoxVille";
@@ -156,7 +157,7 @@ namespace MaisonDesLiguesAPP
             this.materialFlatValider.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialFlatValider.Depth = 0;
             this.materialFlatValider.Icon = null;
-            this.materialFlatValider.Location = new System.Drawing.Point(324, 255);
+            this.materialFlatValider.Location = new System.Drawing.Point(324, 286);
             this.materialFlatValider.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatValider.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatValider.Name = "materialFlatValider";
@@ -173,7 +174,7 @@ namespace MaisonDesLiguesAPP
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(32, 229);
+            this.materialLabel1.Location = new System.Drawing.Point(62, 263);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(39, 19);
@@ -182,7 +183,7 @@ namespace MaisonDesLiguesAPP
             // 
             // textBoxCP
             // 
-            this.textBoxCP.Location = new System.Drawing.Point(107, 202);
+            this.textBoxCP.Location = new System.Drawing.Point(107, 238);
             this.textBoxCP.Mask = "00000";
             this.textBoxCP.Name = "textBoxCP";
             this.textBoxCP.Size = new System.Drawing.Size(38, 20);
@@ -194,18 +195,31 @@ namespace MaisonDesLiguesAPP
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(10, 203);
+            this.materialLabel2.Location = new System.Drawing.Point(10, 237);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(91, 19);
             this.materialLabel2.TabIndex = 16;
             this.materialLabel2.Text = "Code Postal";
             // 
+            // retour
+            // 
+            this.retour.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.retour.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.retour.Location = new System.Drawing.Point(8, 73);
+            this.retour.Name = "retour";
+            this.retour.Size = new System.Drawing.Size(63, 28);
+            this.retour.Style = MetroFramework.MetroColorStyle.Silver;
+            this.retour.TabIndex = 17;
+            this.retour.Text = "Retour";
+            this.retour.Click += new System.EventHandler(this.retour_Click);
+            // 
             // AjouterAdherents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(413, 306);
+            this.ClientSize = new System.Drawing.Size(413, 337);
+            this.Controls.Add(this.retour);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.textBoxCP);
             this.Controls.Add(this.materialLabel1);
@@ -241,5 +255,6 @@ namespace MaisonDesLiguesAPP
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaskedTextBox textBoxCP;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MetroFramework.Controls.MetroTile retour;
     }
 }

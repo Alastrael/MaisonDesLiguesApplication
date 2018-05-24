@@ -93,5 +93,10 @@ namespace MaisonDesLiguesAPP.View
             data.Columns[6].HeaderText = "Téléphone";
             data.Columns[7].HeaderText = "Email";
         }
+
+        private void retour_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

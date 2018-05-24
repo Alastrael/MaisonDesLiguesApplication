@@ -1,6 +1,6 @@
 ﻿namespace MaisonDesLiguesAPP.View
 {
-    partial class AffecterAdhEvent
+    partial class AfficherInfos
     {
         /// <summary>
         /// Required designer variable.
@@ -29,27 +29,34 @@
         private void InitializeComponent()
         {
             this.listBoxAdh = new System.Windows.Forms.ListBox();
-            this.btnAffecter = new System.Windows.Forms.Button();
+            this.btnChoisir = new MaterialSkin.Controls.MaterialFlatButton();
             this.retour = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
             // listBoxAdh
             // 
             this.listBoxAdh.FormattingEnabled = true;
-            this.listBoxAdh.Location = new System.Drawing.Point(12, 128);
+            this.listBoxAdh.Location = new System.Drawing.Point(35, 115);
             this.listBoxAdh.Name = "listBoxAdh";
             this.listBoxAdh.Size = new System.Drawing.Size(327, 108);
-            this.listBoxAdh.TabIndex = 0;
+            this.listBoxAdh.TabIndex = 1;
             // 
-            // btnAffecter
+            // btnChoisir
             // 
-            this.btnAffecter.Location = new System.Drawing.Point(74, 242);
-            this.btnAffecter.Name = "btnAffecter";
-            this.btnAffecter.Size = new System.Drawing.Size(203, 26);
-            this.btnAffecter.TabIndex = 1;
-            this.btnAffecter.Text = "Affecter";
-            this.btnAffecter.UseVisualStyleBackColor = true;
-            this.btnAffecter.Click += new System.EventHandler(this.btnAffecter_Click);
+            this.btnChoisir.AutoSize = true;
+            this.btnChoisir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnChoisir.Depth = 0;
+            this.btnChoisir.Icon = null;
+            this.btnChoisir.Location = new System.Drawing.Point(144, 232);
+            this.btnChoisir.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnChoisir.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnChoisir.Name = "btnChoisir";
+            this.btnChoisir.Primary = false;
+            this.btnChoisir.Size = new System.Drawing.Size(121, 36);
+            this.btnChoisir.TabIndex = 7;
+            this.btnChoisir.Text = "Voir les infos";
+            this.btnChoisir.UseVisualStyleBackColor = true;
+            this.btnChoisir.Click += new System.EventHandler(this.btnChoisir_Click);
             // 
             // retour
             // 
@@ -59,29 +66,30 @@
             this.retour.Name = "retour";
             this.retour.Size = new System.Drawing.Size(63, 28);
             this.retour.Style = MetroFramework.MetroColorStyle.Silver;
-            this.retour.TabIndex = 10;
+            this.retour.TabIndex = 11;
             this.retour.Text = "Retour";
             this.retour.Click += new System.EventHandler(this.retour_Click);
             // 
-            // AffecterAdhEvent
+            // AfficherInfos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 282);
+            this.ClientSize = new System.Drawing.Size(416, 283);
             this.Controls.Add(this.retour);
-            this.Controls.Add(this.btnAffecter);
+            this.Controls.Add(this.btnChoisir);
             this.Controls.Add(this.listBoxAdh);
-            this.Name = "AffecterAdhEvent";
-            this.Text = "Affecter un adhérent à un évènement";
-            this.Load += new System.EventHandler(this.AffecterAdhEvent_Load);
+            this.Name = "AfficherInfos";
+            this.Text = "Afficher les infos";
+            this.Load += new System.EventHandler(this.AfficherInfos_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.ListBox listBoxAdh;
-        private System.Windows.Forms.Button btnAffecter;
+        private MaterialSkin.Controls.MaterialFlatButton btnChoisir;
         private MetroFramework.Controls.MetroTile retour;
     }
 }

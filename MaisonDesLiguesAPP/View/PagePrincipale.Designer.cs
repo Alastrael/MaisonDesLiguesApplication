@@ -32,6 +32,7 @@
             this.metroTileClub = new MetroFramework.Controls.MetroTile();
             this.metroTileAdh = new MetroFramework.Controls.MetroTile();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.retour = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
             // metroTileClub
@@ -73,7 +74,7 @@
             this.metroTile1.BackColor = System.Drawing.Color.Black;
             this.metroTile1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.metroTile1.Enabled = false;
-            this.metroTile1.Location = new System.Drawing.Point(60, 75);
+            this.metroTile1.Location = new System.Drawing.Point(60, 82);
             this.metroTile1.Name = "metroTile1";
             this.metroTile1.Size = new System.Drawing.Size(356, 206);
             this.metroTile1.Style = MetroFramework.MetroColorStyle.Silver;
@@ -83,11 +84,23 @@
             this.metroTile1.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Regular;
             this.metroTile1.UseTileImage = true;
             // 
+            // retour
+            // 
+            this.retour.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.retour.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.retour.Location = new System.Drawing.Point(384, 26);
+            this.retour.Name = "retour";
+            this.retour.Size = new System.Drawing.Size(63, 28);
+            this.retour.Style = MetroFramework.MetroColorStyle.Red;
+            this.retour.TabIndex = 11;
+            this.retour.Text = "Quitter";
+            // 
             // PagePrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(470, 437);
+            this.Controls.Add(this.retour);
             this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.metroTileClub);
             this.Controls.Add(this.metroTileAdh);
@@ -103,6 +116,7 @@
         private MetroFramework.Controls.MetroTile metroTileAdh;
         private MetroFramework.Controls.MetroTile metroTileClub;
         private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroTile retour;
     }
 }
 

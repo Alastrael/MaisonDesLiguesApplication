@@ -35,11 +35,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.retour = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
             // maskTitre
             // 
-            this.maskTitre.Location = new System.Drawing.Point(12, 33);
+            this.maskTitre.Location = new System.Drawing.Point(12, 126);
             this.maskTitre.Name = "maskTitre";
             this.maskTitre.Size = new System.Drawing.Size(476, 20);
             this.maskTitre.TabIndex = 0;
@@ -47,7 +48,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(199, 17);
+            this.label1.Location = new System.Drawing.Point(199, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 13);
             this.label1.TabIndex = 1;
@@ -55,14 +56,14 @@
             // 
             // dtpDebut
             // 
-            this.dtpDebut.Location = new System.Drawing.Point(12, 93);
+            this.dtpDebut.Location = new System.Drawing.Point(12, 187);
             this.dtpDebut.Name = "dtpDebut";
             this.dtpDebut.Size = new System.Drawing.Size(200, 20);
             this.dtpDebut.TabIndex = 2;
             // 
             // dtpFin
             // 
-            this.dtpFin.Location = new System.Drawing.Point(289, 93);
+            this.dtpFin.Location = new System.Drawing.Point(289, 187);
             this.dtpFin.Name = "dtpFin";
             this.dtpFin.Size = new System.Drawing.Size(199, 20);
             this.dtpFin.TabIndex = 3;
@@ -70,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 77);
+            this.label2.Location = new System.Drawing.Point(33, 171);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(150, 13);
             this.label2.TabIndex = 4;
@@ -79,7 +80,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(324, 77);
+            this.label3.Location = new System.Drawing.Point(324, 171);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(134, 13);
             this.label3.TabIndex = 5;
@@ -87,7 +88,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(202, 134);
+            this.btnUpdate.Location = new System.Drawing.Point(202, 213);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(90, 40);
             this.btnUpdate.TabIndex = 6;
@@ -95,11 +96,24 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
+            // retour
+            // 
+            this.retour.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.retour.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.retour.Location = new System.Drawing.Point(12, 66);
+            this.retour.Name = "retour";
+            this.retour.Size = new System.Drawing.Size(63, 28);
+            this.retour.Style = MetroFramework.MetroColorStyle.Silver;
+            this.retour.TabIndex = 11;
+            this.retour.Text = "Retour";
+            this.retour.Click += new System.EventHandler(this.retour_Click);
+            // 
             // ModifierEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 198);
+            this.ClientSize = new System.Drawing.Size(505, 265);
+            this.Controls.Add(this.retour);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -124,5 +138,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnUpdate;
+        private MetroFramework.Controls.MetroTile retour;
     }
 }

@@ -34,6 +34,8 @@
             this.dataClubs = new System.Windows.Forms.DataGridView();
             this.metroMenuEvents = new MetroFramework.Controls.MetroTile();
             this.btnAffect = new MetroFramework.Controls.MetroTile();
+            this.metroStats = new MetroFramework.Controls.MetroTile();
+            this.retour = new MetroFramework.Controls.MetroTile();
             ((System.ComponentModel.ISupportInitialize)(this.dataClubs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,11 +104,33 @@
             this.btnAffect.Text = "Affecter un adhérent";
             this.btnAffect.Click += new System.EventHandler(this.btnAffect_Click);
             // 
+            // metroStats
+            // 
+            this.metroStats.Location = new System.Drawing.Point(417, 368);
+            this.metroStats.Name = "metroStats";
+            this.metroStats.Size = new System.Drawing.Size(126, 38);
+            this.metroStats.TabIndex = 6;
+            this.metroStats.Text = "Statistiques";
+            this.metroStats.Click += new System.EventHandler(this.metroStats_Click);
+            // 
+            // retour
+            // 
+            this.retour.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.retour.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.retour.Location = new System.Drawing.Point(23, 368);
+            this.retour.Name = "retour";
+            this.retour.Size = new System.Drawing.Size(81, 38);
+            this.retour.Style = MetroFramework.MetroColorStyle.Silver;
+            this.retour.TabIndex = 11;
+            this.retour.Text = "Retour";
+            // 
             // MenuClub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 418);
+            this.Controls.Add(this.retour);
+            this.Controls.Add(this.metroStats);
             this.Controls.Add(this.btnAffect);
             this.Controls.Add(this.metroMenuEvents);
             this.Controls.Add(this.dataClubs);
@@ -130,5 +154,7 @@
         private System.Windows.Forms.DataGridView dataClubs;
         private MetroFramework.Controls.MetroTile metroMenuEvents;
         private MetroFramework.Controls.MetroTile btnAffect;
+        private MetroFramework.Controls.MetroTile metroStats;
+        private MetroFramework.Controls.MetroTile retour;
     }
 }

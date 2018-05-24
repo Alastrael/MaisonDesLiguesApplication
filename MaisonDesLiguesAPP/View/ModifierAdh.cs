@@ -38,6 +38,7 @@ namespace MaisonDesLiguesAPP.View
         private void btnChoisir_Click(object sender, EventArgs e)
         {
             int positionA = listBox1.SelectedIndex;
+            List<Club> listeC = connexion.listeClubs();
             adh = liste[positionA];
             textBoxNom.Text = adh.Nom;
             textBoxNom.Enabled = true;
@@ -63,6 +64,11 @@ namespace MaisonDesLiguesAPP.View
             adh.Ville = textBoxVille.Text;
             adh.Codepostal = mskCP.Text;
             connexion.modifierAdh(adh);
+        }
+
+        private void retour_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

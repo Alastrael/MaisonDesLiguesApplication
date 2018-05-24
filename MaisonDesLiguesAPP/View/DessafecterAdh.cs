@@ -61,5 +61,10 @@ namespace MaisonDesLiguesAPP.View
                 listBoxAdh.Items.Add(item.Nom + " " + item.Prenom);
             }
         }
+
+        private void retour_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

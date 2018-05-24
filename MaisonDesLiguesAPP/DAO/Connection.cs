@@ -274,17 +274,19 @@ namespace MaisonDesLiguesAPP
             return liste;
         }
 
-        public void affectation(Adhérents adhérents, Club club)
+        public void affectation(Adhérents adhérents, Club club, double cotisation)
         {
             using(MySqlConnection connexion = new MySqlConnection(connexionParams))
             {
                 connexion.Open();
                 string requete = "UPDATE adherent " +
-                    "SET id_club = @idClub " +
+                    "SET id_club = @idClub , cotisation_adherent = @cotisation " /*, numero_licence = @licence "*/ +
                     "WHERE id_adherent = @idAdherent;";
                 MySqlCommand cmd = new MySqlCommand(requete, connexion);
                 cmd.Parameters.AddWithValue("@idClub", club.id);
                 cmd.Parameters.AddWithValue("@idAdherent", adhérents.Id);
+                cmd.Parameters.AddWithValue("@cotisation", cotisation);
+               // cmd.Parameters.AddWithValue("@licence", club.id);
                 cmd.ExecuteNonQuery();
             }
         }
@@ -381,5 +383,32 @@ namespace MaisonDesLiguesAPP
                 cmd.ExecuteNonQuery();
             }
         }
+
+        public List<int>CotisationsInClub(Club club)
+        {
+            List<int> liste = new List<int>();
+            int cotisation;
+            using (MySqlConnection connexion = new MySqlConnection(connexionParams))
+            {
+                connexion.Open();
+                string requete = "SELECT cotisation_adherent " +
+                    "FROM adherent";
+                MySqlCommand cmd = new MySqlCommand(requete, connexion);
+                cmd.ExecuteNonQuery();
+                using (MySqlDataReader datareader = cmd.ExecuteReader())
+                {
+                    while (datareader.Read())
+                    {
+                        if (datareader["cotisation_adherent"] == DBNull.Value)
+                        {
+                            cotisation = 0;
+                        }
+                        else cotisation = (int)datareader["cotisation_adherent"];
+                        liste.Add(cotisation);
+                    }
+                }
+            }
+            return liste;
+        } 
     }
 }

@@ -41,5 +41,10 @@ namespace MaisonDesLiguesAPP.View
                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             maskTitre.Text = "";
         }
+
+        private void retour_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
