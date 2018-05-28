@@ -32,24 +32,31 @@ namespace MaisonDesLiguesAPP
         private void buttonAjouter_Click(object sender, EventArgs e)
         {
             Connection connexion = new Connection();
-            Adhérents ajout = new Adhérents(textBoxNOM.Text, textBoxPRENOM.Text
-                , dateNaissance.Value, textBoxAdresse.Text, textBoxCP.Text,
-                textBoxVille.Text);
-            connexion.ajouterAdherent(ajout);
+            if (textBoxNOM.Text != "")
+            {
+                Adhérents ajout = new Adhérents(textBoxNOM.Text, textBoxPRENOM.Text
+                        , dateNaissance.Value, textBoxAdresse.Text, textBoxCP.Text,
+                        textBoxVille.Text);
+                connexion.ajouterAdherent(ajout);
 
-            textBoxNOM.Text = "";
-            textBoxPRENOM.Text = "";
-            textBoxAdresse.Text = "";
-            textBoxCP.Text = "";
-            textBoxVille.Text = "";
+                textBoxNOM.Text = "";
+                textBoxPRENOM.Text = "";
+                textBoxAdresse.Text = "";
+                textBoxCP.Text = "";
+                textBoxVille.Text = "";
 
-            data.DataSource = null;
-            data.Update();
-            data.Refresh();
-            data.DataSource = connexion.listeAdherents();
-            data.Columns[0].Visible = false;
-            data.Columns[3].HeaderText = "Date de Naissance";
-            data.Columns[5].HeaderText = "Code Postal";
+                data.DataSource = null;
+                data.Update();
+                data.Refresh();
+                data.DataSource = connexion.listeAdherents();
+                data.Columns[0].Visible = false;
+                data.Columns[3].HeaderText = "Date de Naissance";
+                data.Columns[5].HeaderText = "Code Postal";
+
+                MessageBox.Show("Vous venez de créer l'adhérent " + ajout.Prenom + " " + ajout.Nom, "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else MessageBox.Show("Erreur lors de la création de l'adhérent", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
         }
 
         private void retour_Click(object sender, EventArgs e)

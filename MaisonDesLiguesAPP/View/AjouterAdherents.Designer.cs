@@ -157,7 +157,7 @@ namespace MaisonDesLiguesAPP
             this.materialFlatValider.Cursor = System.Windows.Forms.Cursors.Hand;
             this.materialFlatValider.Depth = 0;
             this.materialFlatValider.Icon = null;
-            this.materialFlatValider.Location = new System.Drawing.Point(324, 286);
+            this.materialFlatValider.Location = new System.Drawing.Point(257, 112);
             this.materialFlatValider.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialFlatValider.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatValider.Name = "materialFlatValider";
