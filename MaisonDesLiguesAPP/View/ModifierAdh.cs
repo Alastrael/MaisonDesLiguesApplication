@@ -15,6 +15,7 @@ namespace MaisonDesLiguesAPP.View
     {
         Connection connexion = new Connection();
         List<Adhérents> liste;
+        List<Club> listeC;
         Adhérents adh;
         public ModifierAdh()
         {
@@ -28,6 +29,7 @@ namespace MaisonDesLiguesAPP.View
 
         private void ModifierAdh_Load(object sender, EventArgs e)
         {
+            listeC = connexion.listeClubs();
             liste = connexion.listeAdherents();
             foreach (var item in liste)
             {
@@ -38,7 +40,9 @@ namespace MaisonDesLiguesAPP.View
         private void btnChoisir_Click(object sender, EventArgs e)
         {
             int positionA = listBox1.SelectedIndex;
-            List<Club> listeC = connexion.listeClubs();
+            listeC = connexion.listeClubs();
+            Club club;
+
             adh = liste[positionA];
             textBoxNom.Text = adh.Nom;
             textBoxNom.Enabled = true;
@@ -53,6 +57,21 @@ namespace MaisonDesLiguesAPP.View
             mskCP.Text = adh.Codepostal;
             mskCP.Enabled = true;
             btnModifier.Enabled = true;
+            affectAd.Text = "Aucun";
+            foreach (var item in listeC)
+            {
+                if (item.id == adh.idClub)
+                {
+                    club = item;
+                    affectAd.Text = item.nom;
+                }
+            }
+            if (affectAd.Text == "Aucun") cotAdh.Enabled = false;
+            else
+            {
+                cotAdh.Enabled = true;
+                cotAdh.Text = adh.cotisation.ToString();
+            }
         }
 
         private void btnModifier_Click(object sender, EventArgs e)
@@ -63,6 +82,7 @@ namespace MaisonDesLiguesAPP.View
             adh.Adresse = textBoxAdresse.Text;
             adh.Ville = textBoxVille.Text;
             adh.Codepostal = mskCP.Text;
+            adh.cotisation = Convert.ToInt32(cotAdh.Text);
             connexion.modifierAdh(adh);
         }
 

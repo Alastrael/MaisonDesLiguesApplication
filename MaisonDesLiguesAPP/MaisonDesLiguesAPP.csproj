@@ -93,10 +93,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\AdherentsGerer.cs" />
     <Compile Include="Business\Adhérents.cs" />
     <Compile Include="Business\Evenements.cs" />
     <Compile Include="Business\Infos.cs" />
+    <Compile Include="Business\Stats.cs" />
     <Compile Include="Business\TypeClub.cs" />
     <Compile Include="View\AfficherInfos.cs">
       <SubType>Form</SubType>
@@ -141,10 +141,7 @@
     <Compile Include="View\AjouterClub.Designer.cs">
       <DependentUpon>AjouterClub.cs</DependentUpon>
     </Compile>
-    <Compile Include="Business\ClubGerer.cs" />
     <Compile Include="DAO\Connection.cs" />
-    <Compile Include="Business\CreationListe.cs" />
-    <Compile Include="Business\CreationListeClub.cs" />
     <Compile Include="View\AjouterEvenement.cs">
       <SubType>Form</SubType>
     </Compile>

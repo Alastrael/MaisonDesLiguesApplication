@@ -33,40 +33,66 @@ namespace MaisonDesLiguesAPP.View
         {
             int position = listBox1.SelectedIndex;
             Club club = clubs[position];
+
             List<Adhérents> listeA = connexion.listeAdherentsInClub(club);
 
-            int cotisationsTotale = 0;
             int nbrAd = listeA.Count;
-            int Cot = 0;
-            int compteur = -1;
-            Adhérents adhCot;
 
+            Adhérents Adhérent;
             List<int> listeD = connexion.CotisationsInClub(club);
-            foreach (var item in listeD)
-            {
-                cotisationsTotale += item;
-                if (item > Cot)
-                {
-                    Cot = item;
-                }
-            }
-            foreach (var item in listeD)
-            {
-                compteur++;
-                if (item == Cot)
-                {
-                    break;
-                }
-            }
-            adhCot = listeA[compteur];
-            cotisationElevee.Text = adhCot.Nom + " " + adhCot.Prenom;
-            totalCotisations.Text = cotisationsTotale.ToString();
+            int[] tab = CotisationElevee(club, listeD);
+            int CotisationHaute = tab[0];
+            int Compteur = tab[1];
+
+            int Total = cotisationTotale(club, listeD);
+
+            Adhérent = listeA[Compteur];
+
+            cotisationElevee.Text = CotisationHaute + " (" + Adhérent.Nom + " " + Adhérent.Prenom+")";
+            totalCotisations.Text = Total.ToString();
             nbrAdh.Text = nbrAd.ToString();
         }
 
         private void retour_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public int cotisationTotale(Club club, List<int>listeD)
+        {
+            int CotisationTotale = 0;
+            
+            foreach (var item in listeD)
+            {
+                CotisationTotale += item;
+            }
+            return CotisationTotale;
+        }
+
+        public int[] CotisationElevee(Club club, List<int>listeD)
+        {
+            int[] tab = new int[2];
+            int CotisationElevee = 0;
+            int Compteur = -1;
+            
+            foreach (var item in listeD)
+            {
+                if (item > CotisationElevee)
+                {
+                    CotisationElevee = item;
+                }
+            }
+            foreach (var item in listeD)
+            {
+                Compteur++;
+                if (item == CotisationElevee)
+                {
+                    break;
+                }
+            }
+            tab[0] = CotisationElevee;
+            tab[1] = Compteur;
+            return tab;
         }
     }
 }

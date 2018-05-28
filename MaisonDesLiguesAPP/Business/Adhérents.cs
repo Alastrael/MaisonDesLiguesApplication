@@ -15,9 +15,18 @@ namespace MaisonDesLiguesAPP
         public string Adresse { get; set; }
         public string Codepostal { get; set; }
         public string Ville { get; set; }
-        public double cotisation { get; set; }
+        public int cotisation { get; set; }
         public string licence { get; set; }
         public int idClub { get; set; }
+        /// <summary>
+        /// Le constructeur de la classe Adhérent.
+        /// </summary>
+        /// <param name="nom"></param>
+        /// <param name="prenom"></param>
+        /// <param name="date"></param>
+        /// <param name="adresse"></param>
+        /// <param name="codepostal"></param>
+        /// <param name="ville"></param>
         public Adhérents(string nom, string prenom, DateTime date, string adresse,
             string codepostal, string ville)
         {

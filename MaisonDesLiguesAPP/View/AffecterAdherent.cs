@@ -44,15 +44,26 @@ namespace MaisonDesLiguesAPP
 
             int positionC = listBoxClubs.SelectedIndex;
             Club club = listeClub[positionC];
-            connexion.affectation(ad, club, Convert.ToDouble(textBoxCotisation.Text));
-            ad.idClub = club.id;
 
-            listBoxAdherents.DataSource = null;
-            listBoxAdherents.Items.Clear();
-            listeAdherent = connexion.listeAdherentsSansClubs();
-            foreach (var item in listeAdherent)
+            try
             {
-                listBoxAdherents.Items.Add(item.Nom + " " + item.Prenom);
+                int cotisation = Convert.ToInt32(textBoxCotisation.Text);
+
+                connexion.affectation(ad, club, cotisation);
+                ad.idClub = club.id;
+
+                listBoxAdherents.DataSource = null;
+                listBoxAdherents.Items.Clear();
+                listeAdherent = connexion.listeAdherentsSansClubs();
+                foreach (var item in listeAdherent)
+                {
+                    listBoxAdherents.Items.Add(item.Nom + " " + item.Prenom);
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Vous avez rentré une mauvaise valeur pour la cotisation. La valeur doit être entière.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

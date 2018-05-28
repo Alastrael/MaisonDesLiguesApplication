@@ -36,7 +36,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxCotisation = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.retour = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
@@ -67,7 +66,7 @@
             // 
             // btnValider
             // 
-            this.btnValider.Location = new System.Drawing.Point(147, 393);
+            this.btnValider.Location = new System.Drawing.Point(146, 393);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(78, 34);
             this.btnValider.TabIndex = 3;
@@ -109,14 +108,6 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "€";
             // 
-            // metroTile1
-            // 
-            this.metroTile1.Location = new System.Drawing.Point(155, 401);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(75, 23);
-            this.metroTile1.TabIndex = 8;
-            this.metroTile1.Text = "metroTile1";
-            // 
             // retour
             // 
             this.retour.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -135,7 +126,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(407, 439);
             this.Controls.Add(this.retour);
-            this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxCotisation);
             this.Controls.Add(this.label3);
@@ -162,7 +152,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxCotisation;
         private System.Windows.Forms.Label label4;
-        private MetroFramework.Controls.MetroTile metroTile1;
         private MetroFramework.Controls.MetroTile retour;
     }
 }

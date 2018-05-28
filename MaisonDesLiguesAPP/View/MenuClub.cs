@@ -53,7 +53,6 @@ namespace MaisonDesLiguesAPP
         {
 
         }
-
         private void metroMenuEvents_Click(object sender, EventArgs e)
         {
             GérerEvents events = new GérerEvents();
@@ -76,6 +75,11 @@ namespace MaisonDesLiguesAPP
         {
             Statistiques stat = new Statistiques();
             stat.ShowDialog();
+        }
+
+        private void retour_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

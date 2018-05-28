@@ -29,6 +29,9 @@ namespace MaisonDesLiguesAPP.View
             dataAdherent.Columns[0].Visible = false;
             dataAdherent.Columns[3].HeaderText = "Date de Naissance";
             dataAdherent.Columns[5].HeaderText = "Code Postal";
+            dataAdherent.Columns[7].Visible = false;
+            dataAdherent.Columns[8].Visible = false;
+            dataAdherent.Columns[9].Visible = false;
         }
 
         private void metroTileCreer_Click(object sender, EventArgs e)

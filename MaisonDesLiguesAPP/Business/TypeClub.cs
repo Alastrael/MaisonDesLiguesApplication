@@ -10,6 +10,10 @@ namespace MaisonDesLiguesAPP.Business
     {
         public int id_type_club { get; set; }
         public string libelle { get; set; }
+        /// <summary>
+        /// Constructeur de la classe TypeClub.
+        /// </summary>
+        /// <param name="libelle"></param>
         public TypeClub(string libelle)
         {
             this.libelle = libelle;

@@ -94,6 +94,7 @@
             this.retour.Style = MetroFramework.MetroColorStyle.Red;
             this.retour.TabIndex = 11;
             this.retour.Text = "Quitter";
+            this.retour.Click += new System.EventHandler(this.retour_Click);
             // 
             // PagePrincipale
             // 

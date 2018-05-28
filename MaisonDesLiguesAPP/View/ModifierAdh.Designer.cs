@@ -47,6 +47,8 @@
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.labelClub = new MaterialSkin.Controls.MaterialLabel();
             this.retour = new MetroFramework.Controls.MetroTile();
+            this.affectAd = new MaterialSkin.Controls.MaterialLabel();
+            this.cotAdh = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -210,7 +212,7 @@
             this.btnModifier.Depth = 0;
             this.btnModifier.Enabled = false;
             this.btnModifier.Icon = null;
-            this.btnModifier.Location = new System.Drawing.Point(382, 560);
+            this.btnModifier.Location = new System.Drawing.Point(413, 578);
             this.btnModifier.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnModifier.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnModifier.Name = "btnModifier";
@@ -271,11 +273,34 @@
             this.retour.Text = "Retour";
             this.retour.Click += new System.EventHandler(this.retour_Click);
             // 
+            // affectAd
+            // 
+            this.affectAd.AutoSize = true;
+            this.affectAd.Depth = 0;
+            this.affectAd.Font = new System.Drawing.Font("Roboto", 11F);
+            this.affectAd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.affectAd.Location = new System.Drawing.Point(248, 512);
+            this.affectAd.MouseState = MaterialSkin.MouseState.HOVER;
+            this.affectAd.Name = "affectAd";
+            this.affectAd.Size = new System.Drawing.Size(46, 19);
+            this.affectAd.TabIndex = 19;
+            this.affectAd.Text = "NULL";
+            // 
+            // cotAdh
+            // 
+            this.cotAdh.Enabled = false;
+            this.cotAdh.Location = new System.Drawing.Point(364, 541);
+            this.cotAdh.Name = "cotAdh";
+            this.cotAdh.Size = new System.Drawing.Size(94, 20);
+            this.cotAdh.TabIndex = 21;
+            // 
             // ModifierAdh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 611);
+            this.ClientSize = new System.Drawing.Size(509, 618);
+            this.Controls.Add(this.cotAdh);
+            this.Controls.Add(this.affectAd);
             this.Controls.Add(this.retour);
             this.Controls.Add(this.labelClub);
             this.Controls.Add(this.materialLabel8);
@@ -324,5 +349,7 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
         private MaterialSkin.Controls.MaterialLabel labelClub;
         private MetroFramework.Controls.MetroTile retour;
+        private MaterialSkin.Controls.MaterialLabel affectAd;
+        private System.Windows.Forms.TextBox cotAdh;
     }
 }

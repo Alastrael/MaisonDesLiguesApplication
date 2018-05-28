@@ -17,7 +17,17 @@ namespace MaisonDesLiguesAPP
         public string telephone { get; set; }
         public string email { get; set; }
         public int idClub { get; set; }
-
+        /// <summary>
+        /// Le constructeur de la classe Club.
+        /// </summary>
+        /// <param name="nom"></param>
+        /// <param name="lien"></param>
+        /// <param name="adresse"></param>
+        /// <param name="codepostal"></param>
+        /// <param name="ville"></param>
+        /// <param name="telephone"></param>
+        /// <param name="email"></param>
+        /// <param name="idClub"></param>
         public Club(string nom, string lien, string adresse, string codepostal,
             string ville, string telephone, string email, int idClub)
         {

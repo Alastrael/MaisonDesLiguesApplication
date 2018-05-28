@@ -123,6 +123,7 @@
             this.retour.Style = MetroFramework.MetroColorStyle.Silver;
             this.retour.TabIndex = 11;
             this.retour.Text = "Retour";
+            this.retour.Click += new System.EventHandler(this.retour_Click);
             // 
             // MenuClub
             // 

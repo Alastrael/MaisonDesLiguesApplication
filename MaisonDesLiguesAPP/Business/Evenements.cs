@@ -12,7 +12,12 @@ namespace MaisonDesLiguesAPP.Business
         public string titre { get; set; }
         public DateTime debut { get; set; }
         public DateTime fin { get; set; }
-
+        /// <summary>
+        /// Le constructeur de la classe.
+        /// </summary>
+        /// <param name="titre"></param>
+        /// <param name="debut"></param>
+        /// <param name="fin"></param>
         public Evenements(string titre, DateTime debut, DateTime fin)
         {
             this.titre = titre;

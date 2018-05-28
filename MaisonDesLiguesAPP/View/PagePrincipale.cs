@@ -109,5 +109,10 @@ namespace MaisonDesLiguesAPP
             MenuClub menuclub = new MenuClub(listeClub);
             menuclub.ShowDialog();
         }
+
+        private void retour_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

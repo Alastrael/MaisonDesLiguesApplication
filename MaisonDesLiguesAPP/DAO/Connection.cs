@@ -10,13 +10,21 @@ namespace MaisonDesLiguesAPP
 {
     public class Connection
     {
+        /// <summary>
+        /// Paramètres de la connexion.
+        /// </summary>
         private string connexionParams;
 
+        /// <summary>
+        /// Constructeur de la classe.
+        /// </summary>
         public Connection()
         {
             Initialize();
         }
-
+        /// <summary>
+        /// Méthode qui initialise la connexion à la base de données.
+        /// </summary>
         private void Initialize()
         {
             string server = "localhost";
@@ -27,6 +35,11 @@ namespace MaisonDesLiguesAPP
             connexionParams = "SERVER=" + server + ";" + "PORT=" + port + ";" + "DATABASE=" +
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + "; persistsecurityinfo=True; SslMode=none;";
         }
+
+        /// <summary>
+        /// Méthode qui ajoute un club dans la base de données.
+        /// </summary>
+        /// <param name="club"></param>
         public void ajouterClub(Club club)
         {
             using (MySqlConnection connexion = new MySqlConnection(connexionParams))
@@ -48,14 +61,18 @@ namespace MaisonDesLiguesAPP
                 cmd.ExecuteNonQuery();
             }
         }
+        /// <summary>
+        /// Méthode qui ajoute un adhérent à la base de données.
+        /// </summary>
+        /// <param name="adhérents"></param>
         public void ajouterAdherent(Adhérents adhérents)
         {
             using (MySqlConnection connexion = new MySqlConnection(connexionParams))
             {
                 connexion.Open();
-                string requete = "INSERT INTO adherent (id_adherent, numero_licence, nom_adherent, " +
+                string requete = "INSERT INTO adherent (id_adherent, nom_adherent, " +
                     "prenom_adherent, datenaissance_adherent, adresse_adherent, codepostal_adherent, " +
-                    "ville_adherent, cotisation_adherent, id_club, id_evenement) VALUES (NULL, NULL, " +
+                    "ville_adherent, cotisation_adherent, id_club, id_evenement) VALUES (NULL, " +
                     "@nom, @prenom, @date, @adresse, @codepostal, @ville, NULL, NULL, NULL);";
                 MySqlCommand cmd = new MySqlCommand(requete, connexion);
                 cmd.Parameters.AddWithValue("@nom", adhérents.Nom);
@@ -67,6 +84,11 @@ namespace MaisonDesLiguesAPP
                 cmd.ExecuteNonQuery();
             }
         }
+        /// <summary>
+        /// Méthode qui ajoute un évènement à la base de données.
+        /// </summary>
+        /// <param name="even"></param>
+        /// <param name="club"></param>
         public void ajouterEvenement(Evenements even, Club club)
         {
             using (MySqlConnection connexion = new MySqlConnection(connexionParams))
@@ -83,6 +105,10 @@ namespace MaisonDesLiguesAPP
             }
         }
 
+        /// <summary>
+        /// Méthode qui supprime un adhérent de la base de données.
+        /// </summary>
+        /// <param name="adhérents"></param>
         public void supprimerAdherent(Adhérents adhérents)
         {
             using (MySqlConnection connexion = new MySqlConnection(connexionParams))
@@ -94,6 +120,10 @@ namespace MaisonDesLiguesAPP
                 cmd.ExecuteNonQuery();
             }
         }
+        /// <summary>
+        /// Méthode qui supprime un club de la base de données.
+        /// </summary>
+        /// <param name="club"></param>
         public void supprimerClub(Club club)
         {
             using (MySqlConnection connexion = new MySqlConnection(connexionParams))
@@ -105,6 +135,10 @@ namespace MaisonDesLiguesAPP
                 cmd.ExecuteNonQuery();
             }
         }
+        /// <summary>
+        /// Méthode qui supprime un évènement dans la base de données.
+        /// </summary>
+        /// <param name="even"></param>
         public void supprimerEvent(Evenements even)
         {
             using (MySqlConnection connexion = new MySqlConnection(connexionParams))
@@ -116,7 +150,10 @@ namespace MaisonDesLiguesAPP
                 cmd.ExecuteNonQuery();
             }
         }
-
+        /// <summary>
+        /// Méthode qui renvoit une liste des adhérents de la base de données.
+        /// </summary>
+        /// <returns></returns>
         public List<Adhérents> listeAdherents()
         {
             List<Adhérents> liste = new List<Adhérents>();
@@ -125,7 +162,7 @@ namespace MaisonDesLiguesAPP
             {
                 connexion.Open();
                 string requete = "SELECT id_adherent, nom_adherent, prenom_adherent, datenaissance_adherent" +
-                    ", adresse_adherent, codepostal_adherent, ville_adherent " +
+                    ", adresse_adherent, codepostal_adherent, ville_adherent, id_club, cotisation_adherent " +
                     "FROM adherent;";
                 MySqlCommand cmd = new MySqlCommand(requete,connexion);
                 using(MySqlDataReader datareader = cmd.ExecuteReader())
@@ -137,12 +174,26 @@ namespace MaisonDesLiguesAPP
                             (string)datareader["adresse_adherent"], (string)datareader["codepostal_adherent"],
                             (string)datareader["ville_adherent"]);
                         adhérents.Id = (int)datareader["id_adherent"];
+                        if(datareader["id_club"] != DBNull.Value)
+                        {
+                            adhérents.idClub = (int)datareader["id_club"];
+                        }
+                        if (datareader["cotisation_adherent"] == DBNull.Value)
+                        {
+                            adhérents.cotisation = 0;
+                        }
+                        else adhérents.cotisation = (int)datareader["cotisation_adherent"];
+       
                         liste.Add(adhérents);
                     }
                 }
             }
             return liste;
         }
+        /// <summary>
+        /// Méthode qui retourne la liste des clubs de la base de données.
+        /// </summary>
+        /// <returns></returns>
         public List<Club> listeClubs()
         {
             List<Club> liste = new List<Club>();
@@ -170,6 +221,10 @@ namespace MaisonDesLiguesAPP
             }
             return liste;
         }
+        /// <summary>
+        /// Méthode qui renvoit une liste des Types de Club de la base de données.
+        /// </summary>
+        /// <returns></returns>
         public List<TypeClub> listeTypeClub()
         {
             List<TypeClub> liste = new List<TypeClub>();
@@ -192,7 +247,11 @@ namespace MaisonDesLiguesAPP
             }
             return liste;
         }
-
+        /// <summary>
+        /// Méthode qui renvoit la liste des évènement d'un club.
+        /// </summary>
+        /// <param name="club"></param>
+        /// <returns></returns>
         public List<Evenements> listeEvents(Club club)
         {
             List<Evenements> liste = new List<Evenements>();
@@ -246,6 +305,10 @@ namespace MaisonDesLiguesAPP
             }
             return liste;
         }
+        /// <summary>
+        /// Méthode qui renvoit la liste des adhérents qui n'ont pas de clubs.
+        /// </summary>
+        /// <returns></returns>
         public List<Adhérents> listeAdherentsSansClubs()
         {
             List<Adhérents> liste = new List<Adhérents>();
@@ -273,23 +336,32 @@ namespace MaisonDesLiguesAPP
             }
             return liste;
         }
-
-        public void affectation(Adhérents adhérents, Club club, double cotisation)
+        /// <summary>
+        /// Méthode qui affecte un adhérent dans un club avec une cotisation (qui peut être nulle).
+        /// </summary>
+        /// <param name="adhérents"></param>
+        /// <param name="club"></param>
+        /// <param name="cotisation"></param>
+        public void affectation(Adhérents adhérents, Club club, int cotisation)
         {
             using(MySqlConnection connexion = new MySqlConnection(connexionParams))
             {
                 connexion.Open();
                 string requete = "UPDATE adherent " +
-                    "SET id_club = @idClub , cotisation_adherent = @cotisation " /*, numero_licence = @licence "*/ +
+                    "SET id_club = @idClub , cotisation_adherent = @cotisation " +
                     "WHERE id_adherent = @idAdherent;";
                 MySqlCommand cmd = new MySqlCommand(requete, connexion);
                 cmd.Parameters.AddWithValue("@idClub", club.id);
                 cmd.Parameters.AddWithValue("@idAdherent", adhérents.Id);
                 cmd.Parameters.AddWithValue("@cotisation", cotisation);
-               // cmd.Parameters.AddWithValue("@licence", club.id);
                 cmd.ExecuteNonQuery();
             }
         }
+        /// <summary>
+        /// Méthode qui affecte des adhérents d'un club dans un des évènements de ce dernier.
+        /// </summary>
+        /// <param name="adh"></param>
+        /// <param name="even"></param>
         public void affecterAdhToEvent(Adhérents adh, Evenements even)
         {
             using (MySqlConnection connexion = new MySqlConnection(connexionParams))
@@ -304,7 +376,10 @@ namespace MaisonDesLiguesAPP
                 cmd.ExecuteNonQuery();
             }
         }
-
+        /// <summary>
+        /// Méthode qui permet de modifier un évènement.
+        /// </summary>
+        /// <param name="even"></param>
         public void modifierEvent(Evenements even)
         {
             using (MySqlConnection connexion = new MySqlConnection(connexionParams))
@@ -323,6 +398,10 @@ namespace MaisonDesLiguesAPP
                 cmd.ExecuteNonQuery();
             }
         }
+        /// <summary>
+        /// Méthode qui permet de modifier un adhérent.
+        /// </summary>
+        /// <param name="adh"></param>
         public void modifierAdh(Adhérents adh)
         {
             using (MySqlConnection connexion = new MySqlConnection(connexionParams))
@@ -331,10 +410,12 @@ namespace MaisonDesLiguesAPP
                 string requete = "UPDATE adherent " +
                     "SET nom_adherent = @nom, " +
                     "prenom_adherent = @prenom, " +
-                    "datenaissance_adherent = @date, adresse_adherent=@adresse, codepostal_adherent=@cp, ville_adherent=@ville " +
+                    "datenaissance_adherent = @date, adresse_adherent=@adresse, codepostal_adherent=@cp, " +
+                    "ville_adherent=@ville, cotisation_adherent=@cotisation " +
                     "WHERE id_adherent = @id;";
                 MySqlCommand cmd = new MySqlCommand(requete, connexion);
                 cmd.Parameters.AddWithValue("@nom", adh.Nom);
+                cmd.Parameters.AddWithValue("@cotisation", adh.cotisation);
                 cmd.Parameters.AddWithValue("@prenom", adh.Prenom);
                 cmd.Parameters.AddWithValue("@date", adh.Naissance);
                 cmd.Parameters.AddWithValue("@adresse", adh.Adresse);
@@ -344,6 +425,10 @@ namespace MaisonDesLiguesAPP
                 cmd.ExecuteNonQuery();
             }
         }
+        /// <summary>
+        /// Méthode qui permet de modifier un club.
+        /// </summary>
+        /// <param name="club"></param>
         public void modifierClub(Club club)
         {
             using (MySqlConnection connexion = new MySqlConnection(connexionParams))
@@ -369,13 +454,17 @@ namespace MaisonDesLiguesAPP
             }
         }
 
+        /// <summary>
+        /// Méthode qui désaffecte un adhérent à son club.
+        /// </summary>
+        /// <param name="adhérents"></param>
         public void desaffectation(Adhérents adhérents)
         {
             using (MySqlConnection connexion = new MySqlConnection(connexionParams))
             {
                 connexion.Open();
                 string requete = "UPDATE adherent " +
-                    "SET id_club = @idClub " +
+                    "SET id_club = @idClub, cotisation_adherent = NULL " +
                     "WHERE id_adherent = @idAdherent;";
                 MySqlCommand cmd = new MySqlCommand(requete, connexion);
                 cmd.Parameters.AddWithValue("@idClub", null);
@@ -383,7 +472,11 @@ namespace MaisonDesLiguesAPP
                 cmd.ExecuteNonQuery();
             }
         }
-
+        /// <summary>
+        /// Méthode qui renvoit toutes les cotisations d'un club.
+        /// </summary>
+        /// <param name="club"></param>
+        /// <returns></returns>
         public List<int>CotisationsInClub(Club club)
         {
             List<int> liste = new List<int>();
