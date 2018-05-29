@@ -49,26 +49,41 @@ namespace MaisonDesLiguesAPP.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int positionA = listBoxEvents.SelectedIndex;
-            ModifierEvent modifier = new ModifierEvent(listeEvents[positionA]);
-            modifier.ShowDialog();
+            try
+            {
+                int positionA = listBoxEvents.SelectedIndex;
+                ModifierEvent modifier = new ModifierEvent(listeEvents[positionA]);
+                modifier.ShowDialog();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Vous n'avez pas sélectionné un évènement.","Erreur",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int positionA = listBoxEvents.SelectedIndex;
-            int positionC = listBoxClubs.SelectedIndex;
-            connexion.supprimerEvent(listeEvents[positionA]);
-            listeEvents = connexion.listeEvents(listeClub[positionC]);
-            for (int i = 0; i < listBoxEvents.Items.Count; i++)
+            try
             {
-                listBoxEvents.Items.Remove(i);
+                int positionA = listBoxEvents.SelectedIndex;
+                int positionC = listBoxClubs.SelectedIndex;
+                connexion.supprimerEvent(listeEvents[positionA]);
+                listeEvents = connexion.listeEvents(listeClub[positionC]);
+                for (int i = 0; i < listBoxEvents.Items.Count; i++)
+                {
+                    listBoxEvents.Items.Remove(i);
+                }
+                listBoxEvents.Items.Clear();
+                foreach (var item in listeEvents)
+                {
+                    listBoxEvents.Items.Add(item.titre);
+                }
             }
-            listBoxEvents.Items.Clear();
-            foreach (var item in listeEvents)
+            catch (Exception)
             {
-                listBoxEvents.Items.Add(item.titre);
+                MessageBox.Show("Vous n'avez pas sélectionné un évènement ou un club.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void créerUnNouvelÉvènementToolStripMenuItem_Click(object sender, EventArgs e)
@@ -79,10 +94,18 @@ namespace MaisonDesLiguesAPP.View
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            int positionA = listBoxEvents.SelectedIndex;
-            int positionC = listBoxClubs.SelectedIndex;
-            AffecterAdhEvent affect = new AffecterAdhEvent(listeClub[positionC],listeEvents[positionA]);
-            affect.ShowDialog();
+            try
+            {
+                int positionA = listBoxEvents.SelectedIndex;
+                int positionC = listBoxClubs.SelectedIndex;
+                AffecterAdhEvent affect = new AffecterAdhEvent(listeClub[positionC], listeEvents[positionA]);
+                affect.ShowDialog();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Vous n'avez pas sélectionné un évènement ou un club.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void btnCreer_Click(object sender, EventArgs e)

@@ -15,7 +15,8 @@ namespace TestProjetM2L
         public void TestCotisations()
         {
             Connection connexion = new Connection();
-            Club club = new Club("Test", "Test.com", "20 rue des Tests", "92140", "Test", "06 66 66 66 66", "test@gmail.com", 1);
+            Club club = new Club("Test", "Test.com", "20 rue des Tests", "92140", "Test", "06 66 66 66 66", 
+                "test@gmail.com", 1);
             club.id = 15;
             Adhérents adhérents = new Adhérents("Test", "Test", new DateTime(1998, 8, 8), "Test", "92140", "Test");
             adhérents.idClub = club.id;

@@ -232,8 +232,7 @@ namespace MaisonDesLiguesAPP
             using (MySqlConnection connexion = new MySqlConnection(connexionParams))
             {
                 connexion.Open();
-                string requete = "SELECT id_type_club, libelle " +
-                    "FROM type_club;";
+                string requete = "CALL id_type_club_procedure;";
                 MySqlCommand cmd = new MySqlCommand(requete, connexion);
                 using (MySqlDataReader datareader = cmd.ExecuteReader())
                 {
